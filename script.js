@@ -200,3 +200,23 @@ async function updateServerStatus(){
 
 updateServerStatus();
 setInterval(updateServerStatus, 30000);
+
+// BUY MODAL
+function openBuy(item) {
+  document.getElementById('buyTitle').textContent = item;
+  const msg = encodeURIComponent('Halo admin, saya mau beli ' + item + ' di Cala SMP');
+  document.getElementById('buyWa').href = 'https://wa.me/6281229029537?text=' + msg;
+  document.getElementById('buyOverlay').classList.add('on');
+  document.getElementById('buyModal').classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBuy() {
+  document.getElementById('buyOverlay').classList.remove('on');
+  document.getElementById('buyModal').classList.remove('on');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeBuy();
+});
