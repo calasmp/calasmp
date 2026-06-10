@@ -7,7 +7,7 @@
 <title>Cala SMP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
       <div class="ip-panel">
         <div class="ip-header">
           <span class="live-dot"></span>
-          <span data-i18n="server_live">Server Live</span>
+          <span id="serverStatus">Checking...</span>
         </div>
         <div class="ip-block">
           <span class="field-lbl" data-i18n="lbl_java">Java Edition</span>
@@ -65,7 +65,10 @@
         <div class="ip-stats">
           <div class="stat"><span class="stat-n" id="playerCount">--</span><span class="stat-l" data-i18n="stat_players">Pemain</span></div>
           <div class="stat-div"></div>
-          <div class="stat"><span class="stat-n">-- ms</span><span class="stat-l" data-i18n="stat_ping">Ping</span></div>
+          <div class="stat">
+    <span class="stat-n" id="ping">-- ms</span>
+    <span class="stat-l">Ping</span>
+</div>
           <div class="stat-div"></div>
           <div class="stat"><span class="stat-n">24/7</span><span class="stat-l" data-i18n="stat_uptime">Uptime</span></div>
         </div>
