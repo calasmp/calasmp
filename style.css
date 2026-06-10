@@ -4,6 +4,7 @@
   --dark:#080c14;--dark2:#0d1220;--card:#101828;--card2:#131d2e;
   --border:rgba(42,143,255,0.18);--text:#e8f0ff;--muted:#6b84a8;
   --gold:#f5c542;--crimson:#e05252;--prime:#2a8fff;--amethyst:#b86eff;--media:#9b59f7;
+  --green:#22d47e;--discord:#5865F2;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;line-height:1.6}
@@ -43,6 +44,10 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);ove
 .btn-main:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,111,212,.4)}
 .btn-ghost{background:none;color:var(--blue2);border:1.5px solid var(--blue);padding:.75rem 1.8rem;border-radius:6px;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .25s}
 .btn-ghost:hover{background:rgba(42,143,255,.08);transform:translateY(-2px)}
+
+/* DISCORD BUTTON */
+.btn-discord{background:var(--discord);color:#fff;padding:.75rem 1.8rem;border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
+.btn-discord:hover{background:#4752c4;transform:translateY(-2px);box-shadow:0 8px 24px rgba(88,101,242,.4)}
 
 /* IP PANEL */
 .ip-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;position:relative;overflow:hidden}
@@ -146,6 +151,19 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);ove
 .req-list li::before{content:'';display:none}
 .ben-list .perk-icon{color:var(--media)}
 
+/* RULES */
+.rules{padding:7rem 0;background:var(--dark)}
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;max-width:900px;margin:0 auto}
+.rules-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;position:relative;overflow:hidden;transition:border-color .3s}
+.rules-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue3),var(--blue2),var(--blue3))}
+.rules-card:hover{border-color:rgba(42,143,255,.4)}
+.rules-icon{font-size:2rem;margin-bottom:1rem}
+.rules-card h3{font-family:'Oxanium',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.2rem;color:var(--text)}
+.rules-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.rules-list li{font-size:.85rem;color:var(--muted);padding-left:1.2rem;position:relative;line-height:1.5;transition:color .2s}
+.rules-list li::before{content:'—';position:absolute;left:0;color:var(--blue2);font-size:.75rem;top:.05rem}
+.rules-list li:hover{color:var(--text)}
+
 /* FOOTER */
 .footer{border-top:1px solid var(--border);padding:3.5rem 0 1rem;background:#060a10}
 .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
@@ -171,6 +189,7 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);ove
   .calaplus-card,.media-card{grid-template-columns:1fr}
   .cp-left,.media-left{border-right:none;border-bottom:1px solid var(--border)}
   .media-right{grid-template-columns:1fr}
+  .rules-grid{grid-template-columns:1fr}
 }
 @media(max-width:768px){
   .hero-grid{grid-template-columns:1fr;gap:2rem;padding-top:1.5rem}
@@ -185,4 +204,6 @@ body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);ove
   .hero-btns{flex-direction:column}
   .item-grid{grid-template-columns:1fr 1fr}
   .footer-inner{grid-template-columns:1fr}
+  .rules-grid{grid-template-columns:1fr}
+  .btn-discord{justify-content:center}
 }
