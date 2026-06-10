@@ -174,25 +174,21 @@ window.addEventListener('resize',()=>{resize();init()});
 // SERVER STATUS
 async function updateServerStatus(){
   const statusEl = document.getElementById('serverStatus');
-
-  // Set online dulu by default
   if(statusEl) statusEl.textContent = '🟢 Online';
 
   try{
-    const response = await fetch('https://api.mcsrvstat.us/3/calasmp.xyz:19165');
+    // Pakai IP asli server bukan domain
+    const response = await fetch('https://api.mcsrvstat.us/3/basic-2.mineidhost.icu:19165');
     const data = await response.json();
 
-    // Player count
     document.getElementById('playerCount').textContent = data.players?.online ?? 0;
 
-    // Hanya set offline kalau API benar-benar confirm offline
     if(statusEl){
-      statusEl.textContent = data.online ? '🟢 Online' : '🟢 Online';
+      statusEl.textContent = data.online ? '🟢 Online' : '🔴 Offline';
     }
 
   } catch(error){
     console.error('MCStatus Error:',error);
-    // Kalau error pun tetap tampilkan online & 0 player
     document.getElementById('playerCount').textContent = '0';
     if(statusEl) statusEl.textContent = '🟢 Online';
   }
