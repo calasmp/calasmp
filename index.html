@@ -7,7 +7,7 @@
 <title>Cala SMP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -124,7 +124,7 @@
           <div class="cp-badge">CALA<span>+</span></div>
           <div class="cp-price">Rp 20.000 <span data-i18n="cp_season">/ season</span></div>
           <p class="cp-note" data-i18n="cp_note">Berlaku selama 1 season penuh</p>
-          <button class="btn-main" data-i18n="btn_buy">Beli Sekarang</button>
+          <button class="btn-main" onclick="openBuy('Rank Cala+')" data-i18n="btn_buy">Beli Sekarang</button>
         </div>
         <div class="cp-right">
           <h4 data-i18n="cp_benefit">Benefit Cala+</h4>
@@ -146,28 +146,28 @@
         <div class="item-name gold-color" data-i18n="key_gold">Gold Key</div>
         <div class="item-price">Rp 10.000</div>
         <p class="item-desc" data-i18n="key_gold_d">Buka loot box Gold tier</p>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('Gold Key')" data-i18n="btn_buy">Beli</button>
       </div>
       <div class="item-card reveal">
         <div class="item-icon crimson-glow">🔑</div>
         <div class="item-name crimson-color" data-i18n="key_crimson">Crimson Key</div>
         <div class="item-price">Rp 10.000</div>
         <p class="item-desc" data-i18n="key_crimson_d">Buka loot box Crimson tier</p>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('Crimson Key')" data-i18n="btn_buy">Beli</button>
       </div>
       <div class="item-card reveal">
         <div class="item-icon prime-glow">🔑</div>
         <div class="item-name prime-color" data-i18n="key_prime">Prime Key</div>
         <div class="item-price">Rp 10.000</div>
         <p class="item-desc" data-i18n="key_prime_d">Buka loot box Prime tier</p>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('Prime Key')" data-i18n="btn_buy">Beli</button>
       </div>
       <div class="item-card reveal">
         <div class="item-icon amethyst-glow">🔑</div>
         <div class="item-name amethyst-color" data-i18n="key_amethyst">Amethyst Key</div>
         <div class="item-price">Rp 15.000</div>
         <p class="item-desc" data-i18n="key_amethyst_d">Buka loot box Amethyst tier eksklusif</p>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('Amethyst Key')" data-i18n="btn_buy">Beli</button>
       </div>
     </div>
 
@@ -178,20 +178,20 @@
         <div class="money-amount">1.000.000</div>
         <div class="money-label" data-i18n="money_label">In-Game Money</div>
         <div class="money-price">Rp 2.000</div>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('In-Game Money 1.000.000')" data-i18n="btn_buy">Beli</button>
       </div>
       <div class="money-card reveal popular-money">
         <div class="hot-tag" data-i18n="hot">Terpopuler</div>
         <div class="money-amount">5.000.000</div>
         <div class="money-label" data-i18n="money_label">In-Game Money</div>
         <div class="money-price">Rp 10.000</div>
-        <button class="item-btn featured-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn featured-btn" onclick="openBuy('In-Game Money 5.000.000')" data-i18n="btn_buy">Beli</button>
       </div>
       <div class="money-card reveal">
         <div class="money-amount">10.000.000</div>
         <div class="money-label" data-i18n="money_label">In-Game Money</div>
         <div class="money-price">Rp 20.000</div>
-        <button class="item-btn" data-i18n="btn_buy">Beli</button>
+        <button class="item-btn" onclick="openBuy('In-Game Money 10.000.000')" data-i18n="btn_buy">Beli</button>
       </div>
     </div>
 
@@ -319,6 +319,31 @@
     <p>© 2025 Cala SMP — <span data-i18n="foot_copy">Tidak berafiliasi dengan Mojang atau Donut SMP.</span></p>
   </div>
 </footer>
+
+<!-- BUY POPUP -->
+<div class="buy-overlay" id="buyOverlay" onclick="closeBuy()"></div>
+<div class="buy-modal" id="buyModal">
+  <button class="buy-close" onclick="closeBuy()">✕</button>
+  <div class="buy-icon">🛒</div>
+  <h3 class="buy-title" id="buyTitle">Beli Item</h3>
+  <p class="buy-sub">Pilih metode pembelian</p>
+  <div class="buy-btns">
+    <a class="buy-wa" id="buyWa" href="#" target="_blank">
+      <span>💬</span>
+      <div>
+        <strong>WhatsApp</strong>
+        <small>Chat langsung ke admin</small>
+      </div>
+    </a>
+    <a class="buy-dc" href="https://discord.com/users/SirVinnzzz" target="_blank">
+      <span>🎮</span>
+      <div>
+        <strong>Discord</strong>
+        <small>DM SirVinnzzz</small>
+      </div>
+    </a>
+  </div>
+</div>
 
 <div class="toast" id="toast"></div>
 <script src="script.js"></script>
