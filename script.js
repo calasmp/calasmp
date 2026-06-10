@@ -174,7 +174,7 @@ window.addEventListener('resize',()=>{resize();init()});
 // SERVER STATUS
 async function updateServerStatus(){
   try{
-    const response = await fetch('https://api.mcstatus.io/v2/status/java/calasmp.xyz:19165');
+    const response = await fetch('https://api.mcsrvstat.us/3/calasmp.xyz:19165');
     const data = await response.json();
 
     // Player count
