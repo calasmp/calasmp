@@ -146,3 +146,57 @@ function draw(){
 }
 resize();init();draw();
 window.addEventListener('resize',()=>{resize();init()});
+
+async function updateServerStatus() {
+    try {
+
+        const response = await fetch(
+            "https://api.mcstatus.io/v2/status/java/calasmp.xyz:19165"
+        );
+
+        const data = await response.json();
+        console.log(JSON.stringify(data, null, 2));
+
+        // Player online
+        document.getElementById("playerCount").textContent =
+            data.players?.online ?? 0;
+
+        // Ping
+        document.getElementById("ping").textContent =
+        data.latency || data.ping
+        ? (data.latency || data.ping) + " ms"
+        : "--";
+        // Status
+        const statusElement = document.getElementById("serverStatus");
+
+        if (statusElement) {
+
+            if (data.online) {
+                statusElement.textContent = "🟢 Online";
+            } else {
+                statusElement.textContent = "🔴 Offline";
+            }
+
+        }
+
+    } catch (error) {
+
+        console.error("MCStatus Error:", error);
+
+        document.getElementById("playerCount").textContent = "--";
+        document.getElementById("ping").textContent = "--";
+
+        const statusElement = document.getElementById("serverStatus");
+
+        if (statusElement) {
+            statusElement.textContent = "⚠ Error";
+        }
+
+    }
+}
+
+// Jalankan saat website dibuka
+updateServerStatus();
+
+// Update tiap 30 detik
+setInterval(updateServerStatus, 30000);
