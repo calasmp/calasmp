@@ -174,23 +174,19 @@ window.addEventListener('resize',()=>{resize();init()});
 // SERVER STATUS
 async function updateServerStatus(){
   const statusEl = document.getElementById('serverStatus');
-  if(statusEl) statusEl.textContent = '🟢 Online';
-
   try{
-    // Pakai IP asli server bukan domain
     const res = await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:19165');
-    const data = await response.json();
-
-    document.getElementById('playerCount').textContent = data.players?.online ?? 0;
-
-    if(statusEl){
-      statusEl.textContent = data.online ? '🟢 Online' : '🔴 Offline';
+    const data = await res.json();
+    if(data.online){
+      document.getElementById('playerCount').textContent = data.players.online + ' / ' + data.players.max;
+      if(statusEl) statusEl.textContent = '🟢 Online';
+    } else {
+      document.getElementById('playerCount').textContent = '0';
+      if(statusEl) statusEl.textContent = '🔴 Offline';
     }
-
-  } catch(error){
-    console.error('MCStatus Error:',error);
-    document.getElementById('playerCount').textContent = '0';
-    if(statusEl) statusEl.textContent = '🟢 Online';
+  } catch(e){
+    document.getElementById('playerCount').textContent = '--';
+    if(statusEl) statusEl.textContent = '🟡 Unknown';
   }
 }
 
