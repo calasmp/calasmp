@@ -178,7 +178,7 @@ async function updateServerStatus(){
     const res = await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:19165');
     const data = await res.json();
     if(data.online){
-      document.getElementById('playerCount').textContent = data.players.online + ' / ' + data.players.max;
+      document.getElementById('playerCount').textContent = data.players.online;
       if(statusEl) statusEl.textContent = '🟢 Online';
     } else {
       document.getElementById('playerCount').textContent = '0';
