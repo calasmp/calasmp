@@ -178,7 +178,7 @@ async function updateServerStatus(){
 
   try{
     // Pakai IP asli server bukan domain
-    const response = await fetch('https://api.mcsrvstat.us/3/basic-2.mineidhost.icu:19165');
+    const res = await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:19165');
     const data = await response.json();
 
     document.getElementById('playerCount').textContent = data.players?.online ?? 0;
