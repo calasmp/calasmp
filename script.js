@@ -24,7 +24,7 @@ const t = {
     key_gold:'Gold Key',key_gold_d:'Buka loot box Gold tier',
     key_crimson:'Crimson Key',key_crimson_d:'Buka loot box Crimson tier',
     key_prime:'Prime Key',key_prime_d:'Buka loot box Prime tier',
-    key_amethyst:'Amethyst Key',key_amethyst_d:'Buka loot box Amethyst tier eksklusif',
+    key_amethyst:'Amethyst Key',key_amethyst_d:'Buka loot box Amethyst tier',
     money_label:'In-Game Money',hot:'Terpopuler',
     custom_title:'Custom Money',custom_sub:'Request jumlah money sesuai kebutuhanmu.',btn_contact:'Hubungi Admin',
     disc:'⚠ Semua pembelian mendukung biaya server. Rank dan item bersifat kosmetik/gameplay dan tidak dapat di-refund.',
