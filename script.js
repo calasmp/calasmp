@@ -4,7 +4,7 @@ const t = {
     tag:'Free-to-Play · Crack All Version',
     hero_lead:'Server survival Indonesia terinspirasi Donut SMP — terbuka untuk semua pemain, termasuk yang tidak memiliki akun premium. Rasakan pengalaman SMP seru bersama komunitas yang aktif.',
     btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'Salin calasmp.xyz:19165',
-    vote_mini:'Vote & dapatkan Money + Shards',
+    vote_cta_title:'Vote Sekarang!',vote_mini:'Dapatkan Money + Shards gratis',
     lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
     server_live:'Server Live',stat_players:'Pemain',stat_season:'Season',stat_uptime:'Uptime',
     about_eye:'Apa itu Cala SMP?',about_h2:'Dibuat untuk Semua Pemain',
@@ -15,12 +15,17 @@ const t = {
     f5t:'Dunia Luas',f5d:'Border Overworld 60.000 x 60.000 dan The End 60.000 x 60.000 — jelajahi sesukamu.',
     f6t:'Komunitas',f6d:'Komunitas aktif dan ramah, staf selalu siap membantu kapan saja.',
     f7t:'Update Rutin',f7d:'Fitur baru terus ditambah berdasarkan masukan dan kebutuhan pemain.',
+    f8t:'Performa Stabil',f8d:'Latensi rendah, uptime tinggi — server yang bisa diandalkan setiap saat.',
     store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Semua pembelian mendukung keberlangsungan server.',
     slabel_rank:'— Rank —',slabel_key:'— Key —',slabel_money:'— In-Game Money —',
-    cp_season:'/ season',cp_note:'Berlaku selama 1 season penuh',
     cp_benefit:'Benefit Cala+',btn_buy:'Beli Sekarang',
-    cp1:'Unlock semua sethome',cp2:'Free 1 key pilihan (Gold / Crimson / Prime)',
-    cp3:'Free 5M in-game money',cp4:'Berlaku 1 season penuh',
+    cp1:'Unlock semua sethome',cp2:'Claim kit Cala+ setiap hari',
+    cp3:'Auction limit 25 slot',cp4:'Order limit 25 slot',cp5:'Berlaku 1 season penuh',
+    cpp_benefit:'Benefit Cala++',
+    cpp1:'Unlock semua sethome',cpp2:'Claim kit Cala+ setiap hari',
+    cpp3:'Claim kit Cala++ setiap hari',cpp4:'Auction limit 35 slot',
+    cpp5:'Order limit 35 slot',cpp6:'/ec — buka Ender Chest dari mana saja',
+    cpp7:'/anvil — buka Anvil dari mana saja',cpp8:'Berlaku 1 season penuh',
     key_gold:'Gold Key',key_gold_d:'Buka loot box Gold tier',
     key_crimson:'Crimson Key',key_crimson_d:'Buka loot box Crimson tier',
     key_prime:'Prime Key',key_prime_d:'Buka loot box Prime tier',
@@ -48,8 +53,7 @@ const t = {
     tag:'Free-to-Play · Crack All Version',
     hero_lead:'An Indonesian survival server inspired by Donut SMP — open to all players, including those without a premium account. Experience fun SMP gameplay with an active community.',
     btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy calasmp.xyz:19165',
-    vote_cta_title:'Vote Now!',
-    vote_mini:'Vote & get Money + Shards',
+    vote_cta_title:'Vote Now!',vote_mini:'Get free Money + Shards',
     lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
     server_live:'Server Live',stat_players:'Players',stat_season:'Season',stat_uptime:'Uptime',
     about_eye:'What is Cala SMP?',about_h2:'Built for Every Player',
@@ -60,12 +64,17 @@ const t = {
     f5t:'Vast World',f5d:'Overworld border 60,000 x 60,000 and The End 60,000 x 60,000 — explore freely.',
     f6t:'Community',f6d:'Active, friendly community with staff always ready to help.',
     f7t:'Regular Updates',f7d:'New features continuously added based on player feedback.',
+    f8t:'Stable Performance',f8d:'Low latency, high uptime — a server you can rely on anytime.',
     store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'All purchases support server operations.',
     slabel_rank:'— Rank —',slabel_key:'— Key —',slabel_money:'— In-Game Money —',
-    cp_season:'/ season',cp_note:'Valid for 1 full season',
     cp_benefit:'Cala+ Benefits',btn_buy:'Buy Now',
-    cp1:'Unlock all sethome',cp2:'Free 1 key of choice (Gold / Crimson / Prime)',
-    cp3:'Free 5M in-game money',cp4:'Valid for 1 full season',
+    cp1:'Unlock all sethome',cp2:'Claim Cala+ kit every day',
+    cp3:'Auction limit 25 slots',cp4:'Order limit 25 slots',cp5:'Valid for 1 full season',
+    cpp_benefit:'Cala++ Benefits',
+    cpp1:'Unlock all sethome',cpp2:'Claim Cala+ kit every day',
+    cpp3:'Claim Cala++ kit every day',cpp4:'Auction limit 35 slots',
+    cpp5:'Order limit 35 slots',cpp6:'/ec — open Ender Chest anywhere',
+    cpp7:'/anvil — open Anvil anywhere',cpp8:'Valid for 1 full season',
     key_gold:'Gold Key',key_gold_d:'Open a Gold tier loot box',
     key_crimson:'Crimson Key',key_crimson_d:'Open a Crimson tier loot box',
     key_prime:'Prime Key',key_prime_d:'Open a Prime tier loot box',
@@ -90,7 +99,6 @@ const t = {
   }
 };
 
-// LANGUAGE
 let lang = 'id';
 function setLang(l){
   lang = l;
@@ -103,11 +111,9 @@ function setLang(l){
 document.querySelectorAll('.lang').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 setLang('id');
 
-// NAV SCROLL
 const nav = document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
 
-// BURGER MENU
 const burger = document.getElementById('burger');
 const menu = document.getElementById('navMenu');
 burger.addEventListener('click',()=>{
@@ -119,7 +125,6 @@ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
   menu.classList.remove('open');
 }));
 
-// COPY IP
 function copyIP(){
   navigator.clipboard.writeText('calasmp.xyz:19165').then(()=>{
     const toast = document.getElementById('toast');
@@ -131,13 +136,11 @@ function copyIP(){
 document.getElementById('copyBtn').addEventListener('click',copyIP);
 document.getElementById('copyBar').addEventListener('click',copyIP);
 
-// REVEAL ON SCROLL
 const obs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('vis')});
 },{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// PARTICLE BACKGROUND
 const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -172,7 +175,6 @@ function draw(){
 resize();init();draw();
 window.addEventListener('resize',()=>{resize();init()});
 
-// SERVER STATUS
 async function updateServerStatus(){
   const statusEl = document.getElementById('serverStatus');
   try{
@@ -190,11 +192,9 @@ async function updateServerStatus(){
     if(statusEl) statusEl.textContent = '🟡 Unknown';
   }
 }
-
 updateServerStatus();
 setInterval(updateServerStatus, 30000);
 
-// BUY MODAL
 function openBuy(item) {
   document.getElementById('buyTitle').textContent = item;
   const msg = encodeURIComponent('Halo admin, saya mau beli ' + item + ' di Cala SMP');
