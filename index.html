@@ -1,401 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cala SMP - Server Minecraft gratis terinspirasi Donut SMP. Main tanpa akun premium!">
-<title>Cala SMP</title>
-<link rel="icon" type="image/png" href="calasmp.png" />
+<title>Cala SMP — Dashboard</title>
+<link rel="icon" href="img/cala.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="logo" href="#home">CALA<span>SMP</span></a>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" data-i18n="nav_home">Beranda</a></li>
-      <li><a href="#about" data-i18n="nav_about">Tentang</a></li>
-      <li><a href="#store" data-i18n="nav_store">Toko</a></li>
-      <li><a href="#media" data-i18n="nav_media">Media</a></li>
-      <li><a href="#rules" data-i18n="nav_rules">Aturan</a></li>
-    </ul>
-    <div class="nav-end">
-      <div class="lang-wrap">
-        <button class="lang active" data-lang="id">🇮🇩</button>
-        <button class="lang" data-lang="en">🇺🇸</button>
-      </div>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
+<div class="page-bg"></div>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <canvas id="bg"></canvas>
-  <div class="hero-grid">
-    <div class="hero-left">
-      <div class="tag" data-i18n="tag">Free-to-Play · Crack All Version</div>
-      <h1>CALA<span>SMP</span></h1>
-      <p class="hero-lead" data-i18n="hero_lead">Server survival Indonesia terinspirasi Donut SMP — terbuka untuk semua pemain, termasuk yang tidak memiliki akun premium. Rasakan pengalaman SMP seru bersama komunitas yang aktif.</p>
-      <div class="hero-btns">
-        <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" class="btn-main" data-i18n="btn_join">Gabung WhatsApp</a>
-        <a href="https://discord.gg/gHMrYFJQqt" target="_blank" class="btn-discord" data-i18n="btn_discord">Discord</a>
-        <button class="btn-ghost" id="copyBtn" data-i18n="btn_copy">Salin IP</button>
+<svg width="0" height="0" style="position:absolute">
+<defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 L12 4 L20 11 V20 H14 V14 H10 V20 H4 Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 L20 5 V11 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 11 V5 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12 L11 14.5 L16 9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 21 L4 21 L4 8 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 21 V14 H15 V21" stroke="currentColor" stroke-width="1.6" fill="none"/></symbol>
+</defs>
+</svg>
+
+<div class="app">
+
+  <div class="top-banner">
+    <div class="banner-video-wrap">
+      <video autoplay muted loop playsinline poster="img/cala.png">
+        <source src="bg.mp4" type="video/mp4">
+      </video>
+      <div class="banner-video-overlay"></div>
+    </div>
+
+    <div class="banner-brand">
+      <img src="img/cala.png" alt="Cala SMP" class="banner-brand-logo">
+      <div class="banner-brand-text">
+        <div class="banner-brand-name">CALA<span>SMP</span></div>
+        <div class="banner-brand-tag">Eco Cpvp</div>
       </div>
-<a href="https://minecraft-mp.com/server/359580/vote/" target="_blank" class="vote-cta">
-  <div class="vote-cta-left">
-    <span class="vote-cta-ico">🗳️</span>
-    <div class="vote-cta-text">
-      <strong data-i18n="vote_cta_title">Vote Sekarang!</strong>
-      <span data-i18n="vote_mini">Dapatkan Money + Shards gratis</span>
+    </div>
+
+    <div class="banner-stat-panel">
+      <div class="banner-stat-item">
+        <span class="banner-stat-dot online"></span>
+        <div>
+          <strong id="bannerPlayerCount">--</strong>
+          <span>Players Online</span>
+        </div>
+      </div>
+      <div class="banner-stat-sep"></div>
+      <div class="banner-stat-item">
+        <span class="banner-stat-ico">🎮</span>
+        <div>
+          <strong>2.9K</strong>
+          <span>Total Members</span>
+        </div>
+      </div>
+      <a href="https://discord.gg/gHMrYFJQqt" target="_blank" class="banner-discord-btn">Discord</a>
     </div>
   </div>
-  <span class="vote-cta-arrow">→</span>
-</a>
-    </div>
-    <div class="hero-right">
-      <div class="ip-panel">
-        <div class="ip-header">
-          <span class="live-dot"></span>
-          <span id="serverStatus">Checking...</span>
-        </div>
-        <div class="ip-block">
-          <span class="field-lbl" data-i18n="lbl_java">Java Edition</span>
-          <span class="field-val mono">calasmp.xyz:19165</span>
-        </div>
-        <div class="ip-block" style="margin-top:.8rem">
-          <span class="field-lbl" data-i18n="lbl_bedrock">Bedrock Edition</span>
-          <span class="field-val mono">calasmp.xyz</span>
-          <span class="field-lbl" style="margin-top:.35rem">Port</span>
-          <span class="field-val mono">19165</span>
-        </div>
-        <div class="ip-badges">
-          <span class="badge">☕ Java</span>
-          <span class="badge">📱 Bedrock</span>
-          <span class="badge">🆓 Crack All Version</span>
-        </div>
-        <div class="ip-stats">
-          <div class="stat"><span class="stat-n" id="playerCount">--</span><span class="stat-l" data-i18n="stat_players">Pemain</span></div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-n">Season 1</span>
-            <span class="stat-l" data-i18n="stat_season">Season</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat"><span class="stat-n">24/7</span><span class="stat-l" data-i18n="stat_uptime">Uptime</span></div>
-        </div>
-        <button class="copy-bar" id="copyBar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-          <span data-i18n="copy_bar">Salin calasmp.xyz:19165</span>
+
+  <aside class="sidebar-stack" id="sidebar">
+
+    <div class="cat-card">
+      <div class="cat-label" data-i18n="categories_lbl">Kategori</div>
+
+      <button class="cat-link active" data-target="home">
+        <span class="cat-ico"><img src="img/Oak_Door.png" alt=""></span>
+        <span data-i18n="nav_home">Beranda</span>
+      </button>
+
+      <div class="cat-group" id="storeGroup">
+        <button class="cat-link" id="storeTrigger">
+          <span class="cat-ico"><img src="img/Emerald.png" alt=""></span>
+          <span data-i18n="nav_store">Toko</span>
+          <svg class="cat-chevron"><use href="#i-chevron"/></svg>
         </button>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint"><span></span><span></span></div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="wrap">
-    <div class="section-top reveal">
-      <p class="eyebrow" data-i18n="about_eye">Apa itu Cala SMP?</p>
-      <h2 data-i18n="about_h2">Dibuat untuk Semua Pemain</h2>
-      <p class="section-sub" data-i18n="about_sub">Server SMP Indonesia yang ramah semua kalangan — dari pemain premium hingga non-premium, semua punya tempat di sini.</p>
-    </div>
-    <div class="feat-grid">
-      <div class="feat reveal"><div class="feat-num">01</div><div class="feat-ico">🔓</div><h3 data-i18n="f1t">No Premium</h3><p data-i18n="f1d">Akun gratis atau cracked? Tetap bisa main di sini tanpa hambatan.</p></div>
-      <div class="feat reveal"><div class="feat-num">02</div><div class="feat-ico">⚔️</div><h3 data-i18n="f2t">Java & Bedrock</h3><p data-i18n="f2d">Crossplay lintas platform. PC, HP, konsol semua terhubung.</p></div>
-      <div class="feat reveal"><div class="feat-num">03</div><div class="feat-ico">💰</div><h3 data-i18n="f3t">Sistem Ekonomi</h3><p data-i18n="f3d">Bangun kerajaan dagangmu dengan sistem ekonomi in-game yang lengkap.</p></div>
-      <div class="feat reveal"><div class="feat-num">04</div><div class="feat-ico">🗺️</div><h3 data-i18n="f5t">Dunia Luas</h3><p data-i18n="f5d">Border Overworld 60.000 x 60.000 dan The End 60.000 x 60.000 — jelajahi sesukamu.</p></div>
-      <div class="feat reveal"><div class="feat-num">05</div><div class="feat-ico">🤝</div><h3 data-i18n="f6t">Komunitas</h3><p data-i18n="f6d">Komunitas aktif dan ramah, staf selalu siap membantu kapan saja.</p></div>
-      <div class="feat reveal"><div class="feat-num">06</div><div class="feat-ico">🔧</div><h3 data-i18n="f7t">Update Rutin</h3><p data-i18n="f7d">Fitur baru terus ditambah berdasarkan masukan dan kebutuhan pemain.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- STORE -->
-<section id="store" class="store">
-  <div class="wrap">
-    <div class="section-top reveal">
-      <p class="eyebrow" data-i18n="store_eye">Toko Server</p>
-      <h2 data-i18n="store_h2">Rank, Key & Money</h2>
-      <p class="section-sub" data-i18n="store_sub">Semua pembelian mendukung keberlangsungan server.</p>
-    </div>
-
-<!-- CALA+ RANK -->
-    <div class="store-label reveal" data-i18n="slabel_rank">— Rank —</div>
-    <div class="calaplus-wrap reveal">
-      <div class="calaplus-card">
-        <div class="cp-left">
-          <div class="cp-badge">CALA<span>+</span></div>
-          <div class="cp-price">Rp 25.000</div>
-          <button class="btn-main" onclick="openBuy('Rank Cala+')" data-i18n="btn_buy">Beli Sekarang</button>
-        </div>
-        <div class="cp-right">
-          <h4 data-i18n="cp_benefit">Benefit Cala+</h4>
-          <ul class="cp-perks">
-            <li><span class="perk-icon">🏠</span><span>Unlock semua sethome</span></li>
-            <li><span class="perk-icon">🎁</span><span>Claim kit Cala+ setiap hari</span></li>
-            <li><span class="perk-icon">🏷️</span><span>Auction limit 25 slot</span></li>
-            <li><span class="perk-icon">📦</span><span>Order limit 25 slot</span></li>
-            <li><span class="perk-icon">📅</span><span>Berlaku 1 season penuh</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- CALA++ RANK -->
-    <div class="calaplus-wrap reveal" style="margin-top:1.2rem">
-      <div class="calaplus-card" style="border-color:var(--amethyst)">
-        <div class="cp-left" style="background:rgba(184,110,255,.04)">
-          <div class="cp-badge">CALA<span style="color:var(--amethyst)">++</span></div>
-          <div class="cp-price">Rp 50.000</div>
-          <button class="btn-main" style="background:var(--amethyst)" onclick="openBuy('Rank Cala++')">Beli Sekarang</button>
-        </div>
-        <div class="cp-right">
-          <h4 data-i18n="cpp_benefit">Benefit Cala++</h4>
-          <ul class="cp-perks">
-            <li><span class="perk-icon">🏠</span><span data-i18n="cpp1">Unlock semua sethome</span></li>
-            <li><span class="perk-icon">🎁</span><span data-i18n="cpp2">Claim kit Cala+ setiap hari</span></li>
-            <li><span class="perk-icon">🎁</span><span data-i18n="cpp3">Claim kit Cala++ setiap hari</span></li>
-            <li><span class="perk-icon">🏷️</span><span data-i18n="cpp4">Auction limit 35 slot</span></li>
-            <li><span class="perk-icon">📦</span><span data-i18n="cpp5">Order limit 35 slot</span></li>
-            <li><span class="perk-icon">📦</span><span data-i18n="cpp6">/ec — buka Ender Chest dari mana saja</span></li>
-            <li><span class="perk-icon">⚒️</span><span data-i18n="cpp7">/anvil — buka Anvil dari mana saja</span></li>
-            <li><span class="perk-icon">⚡</span><span data-i18n="cpp9">/ahfastbuy & /ahfastsell</span></li>
-            <li><span class="perk-icon">📅</span><span data-i18n="cpp8">Berlaku 1 season penuh</span></li>
-        </div>
-      </div>
-    </div>
-
-    <!-- KEYS -->
-    <div class="store-label reveal" data-i18n="slabel_key">— Key —</div>
-    <div class="item-grid">
-      <div class="item-card reveal">
-        <div class="item-icon gold-glow">🔑</div>
-        <div class="item-name gold-color" data-i18n="key_gold">Gold Key</div>
-        <div class="item-price">Rp 10.000</div>
-        <p class="item-desc" data-i18n="key_gold_d">Buka loot box Gold tier</p>
-        <button class="item-btn" onclick="openBuy('Gold Key')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="item-card reveal">
-        <div class="item-icon crimson-glow">🔑</div>
-        <div class="item-name crimson-color" data-i18n="key_crimson">Crimson Key</div>
-        <div class="item-price">Rp 10.000</div>
-        <p class="item-desc" data-i18n="key_crimson_d">Buka loot box Crimson tier</p>
-        <button class="item-btn" onclick="openBuy('Crimson Key')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="item-card reveal">
-        <div class="item-icon prime-glow">🔑</div>
-        <div class="item-name prime-color" data-i18n="key_prime">Prime Key</div>
-        <div class="item-price">Rp 10.000</div>
-        <p class="item-desc" data-i18n="key_prime_d">Buka loot box Prime tier</p>
-        <button class="item-btn" onclick="openBuy('Prime Key')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="item-card reveal">
-        <div class="item-icon amethyst-glow">🔑</div>
-        <div class="item-name amethyst-color" data-i18n="key_amethyst">Amethyst Key</div>
-        <div class="item-price">Rp 15.000</div>
-        <p class="item-desc" data-i18n="key_amethyst_d">Buka loot box Amethyst eksklusif</p>
-        <button class="item-btn" onclick="openBuy('Amethyst Key')" data-i18n="btn_buy">Beli</button>
-      </div>
-    </div>
-
-    <!-- MONEY -->
-    <div class="store-label reveal" data-i18n="slabel_money">— In-Game Money —</div>
-    <div class="money-grid">
-      <div class="money-card reveal">
-        <div class="money-amount">1M</div>
-        <div class="money-label" data-i18n="money_label">In-Game Money</div>
-        <div class="money-price">Rp 2.000</div>
-        <button class="item-btn" onclick="openBuy('Money 1M')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="money-card reveal popular-money">
-        <div class="hot-tag" data-i18n="hot">Terpopuler</div>
-        <div class="money-amount">5M</div>
-        <div class="money-label" data-i18n="money_label">In-Game Money</div>
-        <div class="money-price">Rp 10.000</div>
-        <button class="item-btn featured-btn" onclick="openBuy('Money 5M')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="money-card reveal">
-        <div class="money-amount">10M</div>
-        <div class="money-label" data-i18n="money_label">In-Game Money</div>
-        <div class="money-price">Rp 20.000</div>
-        <button class="item-btn" onclick="openBuy('Money 10M')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="money-card reveal">
-        <div class="money-amount">25M</div>
-        <div class="money-label" data-i18n="money_label">In-Game Money</div>
-        <div class="money-price">Rp 50.000</div>
-        <button class="item-btn" onclick="openBuy('Money 25M')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="money-card reveal">
-        <div class="money-amount">50M</div>
-        <div class="money-label" data-i18n="money_label">In-Game Money</div>
-        <div class="money-price">Rp 100.000</div>
-        <button class="item-btn" onclick="openBuy('Money 50M')" data-i18n="btn_buy">Beli</button>
-      </div>
-      <div class="money-card reveal custom-money">
-        <div class="money-amount" data-i18n="custom_title">Custom Money</div>
-        <div class="money-label" data-i18n="custom_sub">Request jumlah money sesuai kebutuhanmu.</div>
-        <button class="item-btn" onclick="openBuy('Custom Money')" data-i18n="btn_contact">Hubungi Admin</button>
-      </div>
-    </div>
-
-    <p class="disclaimer reveal" data-i18n="disc">⚠ Semua pembelian mendukung biaya server. Rank dan item bersifat kosmetik/gameplay dan tidak dapat di-refund.</p>
-  </div>
-</section>
-
-<!-- MEDIA -->
-<section id="media" class="media">
-  <div class="wrap">
-    <div class="section-top reveal">
-      <p class="eyebrow" data-i18n="media_eye">Content Creator</p>
-      <h2 data-i18n="media_h2">Rank Media</h2>
-      <p class="section-sub" data-i18n="media_sub">Kamu content creator? Daftarkan dirimu dan dapatkan rank eksklusif.</p>
-    </div>
-    <div class="media-wrap reveal">
-      <div class="media-card">
-        <div class="media-left">
-          <div class="media-badge">MEDIA</div>
-          <p class="media-free" data-i18n="media_free">✦ Gratis / Free</p>
-          <p class="media-note" data-i18n="media_note">Berlaku selama 1 season</p>
-          <a href="https://discord.gg/2YJer3HQH" target="_blank" class="btn-main" data-i18n="media_apply">Daftar Sekarang</a>
-        </div>
-        <div class="media-right">
-          <div class="media-col">
-            <h4 data-i18n="media_req">Requirement</h4>
-            <ul class="media-list req-list">
-              <li><span class="perk-icon">📺</span><span data-i18n="mr1">1,000 total views livestream</span></li>
-              <li><span class="perk-icon">📱</span><span data-i18n="mr2">5.000 views di TikTok atau YouTube</span></li>
-            </ul>
-          </div>
-          <div class="media-col">
-            <h4 data-i18n="media_ben">Benefit</h4>
-            <ul class="media-list ben-list">
-              <li><span class="perk-icon">🏠</span><span data-i18n="mb1">Unlock semua sethome</span></li>
-              <li><span class="perk-icon">💬</span><span data-i18n="mb2">Prefix "media" di tab & chat (warna ungu)</span></li>
-              <li><span class="perk-icon">📅</span><span data-i18n="mb3">Berlaku 1 season penuh</span></li>
-            </ul>
+        <div class="cat-submenu" id="storeSubmenu">
+          <div class="cat-submenu-inner">
+            <button class="cat-sublink" data-target="ranks"><img src="img/Lapis_Lazuli.png" alt=""><span data-i18n="nav_ranks">Rank</span></button>
+            <button class="cat-sublink" data-target="keys"><img src="img/Tripwire_Hook.png" alt=""><span data-i18n="nav_keys">Key</span></button>
+            <button class="cat-sublink" data-target="money"><img src="img/Bundle_Filled.png" alt=""><span data-i18n="nav_money">Saldo</span></button>
+            <button class="cat-sublink" data-target="tools"><img src="img/Netherite_Pickaxe.png" alt=""><span data-i18n="nav_tools">Amethyst Tool</span></button>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- RULES -->
-<section id="rules" class="rules">
-  <div class="wrap">
-    <div class="section-top reveal">
-      <p class="eyebrow" data-i18n="rules_eye">Peraturan</p>
-      <h2 data-i18n="rules_h2">Aturan Server</h2>
-      <p class="section-sub" data-i18n="rules_sub">Harap baca dan patuhi semua aturan berikut agar pengalaman bermain tetap menyenangkan untuk semua orang.</p>
+      <button class="cat-link" data-target="media">
+        <span class="cat-ico"><img src="img/Purple_Dye.png" alt=""></span>
+        <span data-i18n="nav_media">Media Partner</span>
+      </button>
+      <button class="cat-link" data-target="rules">
+        <span class="cat-ico"><img src="img/Writable_Book.png" alt=""></span>
+        <span data-i18n="nav_rules">Aturan Server</span>
+      </button>
     </div>
-    <div class="rules-grid">
-      <div class="rules-card reveal">
-        <div class="rules-icon">🎮</div>
-        <h3 data-i18n="rule1_title">Server Rules</h3>
-        <ul class="rules-list">
-          <li>No Hacked Clients</li>
-          <li>No Movement Mods</li>
-          <li>No Inventory Mods</li>
-          <li>No Health Indicators</li>
-          <li>No Radar</li>
-          <li>No Freecam</li>
-          <li>No Auto Place</li>
-          <li>No Easy Place</li>
-          <li>No Macros or Scripts</li>
-          <li>No Abusing Bugs</li>
-          <li>No Using Dupe Methods</li>
-          <li>No IRL Trading</li>
-          <li>No Invite Rewards</li>
-          <li>No Cross Server Trading</li>
-          <li>No Finding or Using the Seed</li>
-          <li>No Using More Than 3 Accounts</li>
-          <li>No Mouse Tweaks / Scrollers</li>
-          <li>No Nitro Boost Rewards</li>
-          <li>No Crafting Modifications</li>
-          <li>No Staff Impersonation</li>
-          <li>No External Gambling</li>
-        </ul>
+
+    <div class="footer-card">
+      <div class="lang-wrap">
+        <button class="lang active" data-lang="id">ID</button>
+        <button class="lang" data-lang="en">EN</button>
       </div>
-      <div class="rules-card reveal">
-        <div class="rules-icon">💬</div>
-        <h3 data-i18n="rule2_title">Chat Rules</h3>
-        <ul class="rules-list">
-          <li>No Spamming</li>
-          <li>No Harassing</li>
-          <li>No Advertising or Promotion</li>
-          <li>No Discrimination or Hate Speech</li>
-          <li>No Death Threats</li>
-          <li>No Sharing Others' Private Information</li>
-          <li>No Pretending to be Someone Else</li>
-          <li>No Ban Evasion</li>
-          <li>No Lying to Staff Members</li>
-          <li>Report All Bugs, Glitches, and Cheaters</li>
-        </ul>
+      <a class="side-cta discord" href="https://discord.gg/gHMrYFJQqt" target="_blank" data-i18n="btn_discord">Discord</a>
+      <a class="side-cta wa" href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" data-i18n="btn_join">WhatsApp</a>
+      <button class="side-ip" id="copyIp">calasmp.xyz:19165</button>
+    </div>
+
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-glow"></div>
+      <div class="topbar-title">
+        <h2 id="pageTitle" data-i18n="nav_home">Beranda</h2>
+        <p id="pageSub" data-i18n="topbar_home_sub">Welcome to Cala SMP!</p>
       </div>
-    </div>
-  </div>
-</section>
+      <a class="vote-pill" href="https://minecraft-mp.com/server/359580/vote/" target="_blank">
+        <span class="vote-pill-ico">🗳️</span>
+        <span class="vp-text" data-i18n="btn_vote_short">Vote</span>
+      </a>
+    </header>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <div class="logo">CALA<span>SMP</span></div>
-      <p data-i18n="foot_tag">Server SMP Indonesia terinspirasi Donut SMP, untuk semua orang.</p>
-    </div>
-    <div class="footer-col">
-      <h4 data-i18n="foot_nav">Navigasi</h4>
-      <a href="#home" data-i18n="nav_home">Beranda</a>
-      <a href="#about" data-i18n="nav_about">Tentang</a>
-      <a href="#store" data-i18n="nav_store">Toko</a>
-      <a href="#media" data-i18n="nav_media">Media</a>
-      <a href="#rules" data-i18n="nav_rules">Aturan</a>
-    </div>
-    <div class="footer-col">
-      <h4>Komunitas</h4>
-      <a href="https://discord.gg/2YJer3HQH" target="_blank">Discord</a>
-      <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" data-i18n="foot_wa">WhatsApp Group</a>
-      <a href="#rules" data-i18n="foot_rules">Aturan Server</a>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    <p>© 2025 Cala SMP — <span data-i18n="foot_copy">Tidak berafiliasi dengan Mojang atau Donut SMP.</span></p>
-  </div>
-</footer>
+    <main class="content">
 
-<!-- BUY POPUP -->
+      <section class="pane active" id="pane-home">
+        <div class="hero-grid">
+          <div class="hero-glow"></div>
+          <div class="hero-left">
+            <div class="tag" data-i18n="tag">Free-to-Play · Crack All Version</div>
+            <h1>CALA<span>SMP</span></h1>
+            <p class="hero-lead" data-i18n="hero_lead">Server survival Indonesia terinspirasi Donut SMP — terbuka untuk semua pemain, termasuk yang tidak memiliki akun premium. Rasakan pengalaman SMP seru bersama komunitas yang aktif.</p>
+            <div class="hero-btns">
+              <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" class="btn-main" data-i18n="btn_join">Gabung WhatsApp</a>
+              <a href="https://discord.gg/gHMrYFJQqt" target="_blank" class="btn-discord" data-i18n="btn_discord">Discord</a>
+              <button class="btn-ghost" id="copyBtn" data-i18n="btn_copy">Salin IP</button>
+            </div>
+            <a href="https://minecraft-mp.com/server/359580/vote/" target="_blank" class="vote-cta">
+              <div class="vote-cta-left">
+                <svg class="vote-cta-ico"><use href="#i-ticket"/></svg>
+                <div class="vote-cta-text">
+                  <strong data-i18n="vote_cta_title">Vote Sekarang!</strong>
+                  <span data-i18n="vote_mini">Dapatkan Money + Shards gratis</span>
+                </div>
+              </div>
+              <span class="vote-cta-arrow">→</span>
+            </a>
+          </div>
+          <div class="hero-right">
+            <div class="ip-panel">
+              <div class="ip-header"><span class="live-dot"></span><span id="serverStatus">Checking...</span></div>
+              <div class="ip-block">
+                <span class="field-lbl" data-i18n="lbl_java">Java Edition</span>
+                <span class="field-val">calasmp.xyz:19165</span>
+              </div>
+              <div class="ip-block" style="margin-top:.7rem">
+                <span class="field-lbl" data-i18n="lbl_bedrock">Bedrock Edition</span>
+                <span class="field-val">calasmp.xyz</span>
+                <span class="field-lbl" style="margin-top:.3rem">Port</span>
+                <span class="field-val">19165</span>
+              </div>
+              <div class="ip-badges">
+                <span class="badge">☕ Java</span>
+                <span class="badge">📱 Bedrock</span>
+                <span class="badge">🆓 Crack All Version</span>
+              </div>
+              <div class="ip-stats">
+                <div class="stat"><span class="stat-n" id="playerCount">--</span><span class="stat-l" data-i18n="stat_players">Pemain</span></div>
+                <div class="stat-div"></div>
+                <div class="stat"><span class="stat-n">1</span><span class="stat-l" data-i18n="stat_season">Season</span></div>
+                <div class="stat-div"></div>
+                <div class="stat"><span class="stat-n">24/7</span><span class="stat-l" data-i18n="stat_uptime">Uptime</span></div>
+              </div>
+              <button class="copy-bar" id="copyBar">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                <span data-i18n="copy_bar">Salin calasmp.xyz:19165</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-store">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="store_eye">Toko Server</span>
+          <h2 data-i18n="store_h2">Rank, Key & Money</h2>
+          <p data-i18n="store_sub">Semua pembelian mendukung keberlangsungan server.</p>
+        </div>
+        <div class="tile-grid">
+          <div class="tile" data-target="ranks">
+            <div class="tile-icon"><img src="img/Lapis_Lazuli.png" alt=""></div>
+            <h3 data-i18n="nav_ranks">Rank</h3>
+            <p data-i18n="tile_ranks_d">Prefix keren, unlock sethome, kit harian, dan slot ekonomi lebih besar.</p>
+            <span class="go" data-i18n="open_menu">Buka →</span>
+          </div>
+          <div class="tile" data-target="keys">
+            <div class="tile-icon"><img src="img/Tripwire_Hook.png" alt=""></div>
+            <h3 data-i18n="nav_keys">Key</h3>
+            <p data-i18n="tile_keys_d">Buka loot box buat dapetin item langka.</p>
+            <span class="go" data-i18n="open_menu">Buka →</span>
+          </div>
+          <div class="tile" data-target="money">
+            <div class="tile-icon"><img src="img/Bundle_Filled.png" alt=""></div>
+            <h3 data-i18n="nav_money">Saldo</h3>
+            <p data-i18n="tile_money_d">Top up in-game money</p>
+            <span class="go" data-i18n="open_menu">Buka →</span>
+          </div>
+          <div class="tile" data-target="tools">
+            <div class="tile-icon"><img src="img/Netherite_Pickaxe.png" alt=""></div>
+            <h3 data-i18n="nav_tools">Amethyst Tool</h3>
+            <p data-i18n="tile_tools_d">Tools yang keren dan membantu mendapatkan lebih banyak money</p>
+            <span class="go" data-i18n="open_menu">Buka →</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-ranks">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="nav_ranks">Rank</span>
+          <h2 data-i18n="ranks_h2">Rank Server</h2>
+          <p data-i18n="ranks_sub">Dapatkan banyak benefit dengan membeli rank!</p>
+        </div>
+        <div class="calaplus-wrap">
+          <div class="calaplus-card">
+            <div class="cp-left">
+              <img class="cp-icon" src="img/Lapis_Lazuli.png" alt="">
+              <div class="cp-badge">CALA<span>+</span></div>
+              <div class="cp-price">Rp 25.000</div>
+              <button class="btn-main" onclick="openBuy('Rank Cala+')" data-i18n="btn_buy">Beli Sekarang</button>
+            </div>
+            <div class="cp-right">
+              <h4 data-i18n="cp_benefit">Benefit Cala+</h4>
+              <ul class="cp-perks">
+                <li><span class="perk-dash">—</span><span data-i18n="cp1">Unlock semua sethome</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cp2">Claim kit Cala+ setiap hari</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cp3">Auction limit 25 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cp4">Order limit 25 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cp5">Berlaku 1 season penuh</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="calaplus-wrap">
+          <div class="calaplus-card pp">
+            <div class="cp-left">
+              <img class="cp-icon" src="img/Diamond.png" alt="">
+              <div class="cp-badge">CALA<span>++</span></div>
+              <div class="cp-price">Rp 50.000</div>
+              <button class="btn-main" style="background:var(--amethyst)" onclick="openBuy('Rank Cala++')" data-i18n="btn_buy">Beli Sekarang</button>
+            </div>
+            <div class="cp-right">
+              <h4 data-i18n="cpp_benefit">Benefit Cala++</h4>
+              <ul class="cp-perks">
+                <li><span class="perk-dash">—</span><span data-i18n="cpp1">Unlock semua sethome</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp2">Claim kit Cala+ setiap hari</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp3">Claim kit Cala++ setiap hari</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp4">Auction limit 35 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp5">Order limit 35 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp6">/ec — buka Ender Chest dari mana saja</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp7">/anvil — buka Anvil dari mana saja</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp9">/ahfastbuy & /ahfastsell</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp8">Berlaku 1 season penuh</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-keys">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="nav_keys">Key</span>
+          <h2 data-i18n="keys_h2">Key Crate</h2>
+          <p data-i18n="keys_sub">Dapatkan Tools dan armor spesial dari loot box!</p>
+        </div>
+        <div class="item-grid">
+          <div class="item-card glow-gold">
+            <div class="item-icon-wrap"><img src="img/Tripwire_Hook.png" alt=""></div>
+            <div class="item-name gold-color" data-i18n="key_gold">Gold Key</div>
+            <div class="item-price">Rp 10.000</div>
+            <p class="item-desc" data-i18n="key_gold_d">Buka loot box Gold tier</p>
+            <button class="item-btn" onclick="openBuy('Gold Key')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card glow-crimson">
+            <div class="item-icon-wrap"><img src="img/Tripwire_Hook.png" alt=""></div>
+            <div class="item-name crimson-color" data-i18n="key_crimson">Crimson Key</div>
+            <div class="item-price">Rp 10.000</div>
+            <p class="item-desc" data-i18n="key_crimson_d">Buka loot box Crimson tier</p>
+            <button class="item-btn" onclick="openBuy('Crimson Key')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card glow-prime">
+            <div class="item-icon-wrap"><img src="img/Tripwire_Hook.png" alt=""></div>
+            <div class="item-name prime-color" data-i18n="key_prime">Prime Key</div>
+            <div class="item-price">Rp 10.000</div>
+            <p class="item-desc" data-i18n="key_prime_d">Buka loot box Prime tier</p>
+            <button class="item-btn" onclick="openBuy('Prime Key')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card amethyst-border glow-amethyst">
+            <div class="item-icon-wrap"><img src="img/Tripwire_Hook.png" alt=""></div>
+            <div class="item-name amethyst-color" data-i18n="key_amethyst">Amethyst Key</div>
+            <div class="item-price">Rp 15.000</div>
+            <p class="item-desc" data-i18n="key_amethyst_d">Buka loot box Amethyst eksklusif</p>
+            <button class="item-btn amethyst-btn" onclick="openBuy('Amethyst Key')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-money">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="nav_money">Saldo</span>
+          <h2 data-i18n="money_h2">In-Game Money</h2>
+          <p data-i18n="money_sub">Top up mulai 2k aja</p>
+        </div>
+        <div class="money-grid">
+          <div class="money-card">
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount">1M</div>
+            <div class="money-label" data-i18n="money_label">In-Game Money</div>
+            <div class="money-price">Rp 2.000</div>
+            <button class="item-btn" onclick="openBuy('Money 1M')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="money-card popular">
+            <div class="hot-tag" data-i18n="hot">Terpopuler</div>
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount">5M</div>
+            <div class="money-label" data-i18n="money_label">In-Game Money</div>
+            <div class="money-price">Rp 10.000</div>
+            <button class="item-btn" onclick="openBuy('Money 5M')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="money-card">
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount">10M</div>
+            <div class="money-label" data-i18n="money_label">In-Game Money</div>
+            <div class="money-price">Rp 20.000</div>
+            <button class="item-btn" onclick="openBuy('Money 10M')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="money-card">
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount">25M</div>
+            <div class="money-label" data-i18n="money_label">In-Game Money</div>
+            <div class="money-price">Rp 50.000</div>
+            <button class="item-btn" onclick="openBuy('Money 25M')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="money-card">
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount">50M</div>
+            <div class="money-label" data-i18n="money_label">In-Game Money</div>
+            <div class="money-price">Rp 100.000</div>
+            <button class="item-btn" onclick="openBuy('Money 50M')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="money-card custom">
+            <img class="money-icon" src="img/Bundle_Filled.png" alt="">
+            <div class="money-amount" data-i18n="custom_title">Custom</div>
+            <div class="money-label" data-i18n="custom_sub">Request jumlah money sesuai kebutuhanmu.</div>
+            <button class="item-btn" onclick="openBuy('Custom Money')" data-i18n="btn_contact">Hubungi Admin</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-tools">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="nav_tools">Amethyst Tool</span>
+          <h2 data-i18n="tools_h2">Amethyst Tools 1 Bulan</h2>
+          <p data-i18n="tools_sub">Dapatkan tools Amethyst yang berdurasi 1 bulan.</p>
+        </div>
+        <div class="item-grid">
+          <div class="item-card amethyst-border glow-amethyst">
+            <div class="item-icon-wrap"><img src="img/TreeChopper_Axe.png" alt=""></div>
+            <div class="item-name amethyst-color" data-i18n="am_sword">Tree Chopper</div>
+            <div class="item-price">Rp 20.000</div>
+            <p class="item-desc" data-i18n="am_sword_d">Nebang pohon hanya dengan 1 klik</p>
+            <button class="item-btn amethyst-btn" onclick="openBuy('Tree Chopper')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card amethyst-border glow-amethyst">
+            <div class="item-icon-wrap"><img src="img/Sellaxe_Axe.png" alt=""></div>
+            <div class="item-name amethyst-color" data-i18n="am_axe">Sell Axe</div>
+            <div class="item-price">Rp 20.000</div>
+            <p class="item-desc" data-i18n="am_axe_d">Auto-sell isi chest langsung masuk money kamu.</p>
+            <button class="item-btn amethyst-btn" onclick="openBuy('Sell Axe')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card amethyst-border glow-amethyst">
+            <div class="item-icon-wrap"><img src="img/Netherite_Pickaxe.png" alt=""></div>
+            <div class="item-name amethyst-color" data-i18n="am_pickaxe">Amethyst Drill</div>
+            <div class="item-price">Rp 35.000</div>
+            <p class="item-desc" data-i18n="am_pickaxe_d">Mining jauh lebih cepat dengan 3x3 block</p>
+            <button class="item-btn amethyst-btn" onclick="openBuy('Amethyst Drill')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+          <div class="item-card water-border glow-water">
+            <div class="item-icon-wrap"><img src="img/Potion_Water.png" alt=""></div>
+            <div class="item-name water-color" data-i18n="am_shard">Shard Booster</div>
+            <div class="item-price">Rp 35.000</div>
+            <p class="item-desc" data-i18n="am_shard_d">Dapatkan 4 shard setiap menit selama 3 hari.</p>
+            <button class="item-btn water-btn" onclick="openBuy('Shard Booster')" data-i18n="btn_buy_short">Beli</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-media">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="media_eye">Content Creator</span>
+          <h2 data-i18n="media_h2">Rank Media</h2>
+          <p data-i18n="media_sub">Kamu content creator? Daftarkan dirimu dan dapatkan rank eksklusif.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-left">
+            <img style="width:34px;height:34px" src="img/Purple_Dye.png" alt="">
+            <div class="media-badge">MEDIA</div>
+            <p class="media-free" data-i18n="media_free">✦ Gratis / Free</p>
+            <p class="media-note" data-i18n="media_note">Berlaku selama 1 season</p>
+            <a href="https://wa.me/6281229029537?text=Halo%20admin%2C%20saya%20ingin%20mengajukan%20rank%20media%2C%20saya%20akan%20kirim%20bukti%20sudah%20mencapai%20requirement" target="_blank" class="btn-main" data-i18n="media_apply">Daftar Sekarang</a>
+          </div>
+          <div class="media-right">
+            <div class="media-col">
+              <h4 data-i18n="media_req">Requirement</h4>
+              <ul class="media-list">
+                <li><span class="perk-dash">—</span><span data-i18n="mr1">500 total views livestream</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mr2">2.000 views di TikTok atau YouTube</span></li>
+              </ul>
+            </div>
+            <div class="media-col">
+              <h4 data-i18n="media_ben">Benefit</h4>
+              <ul class="media-list">
+                <li><span class="perk-dash">—</span><span data-i18n="mb1">Unlock semua sethome</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mb2">Prefix "media" di tab & chat (warna ungu)</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mb3">Berlaku 1 season penuh</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane" id="pane-rules">
+        <div class="pane-intro">
+          <span class="eyebrow" data-i18n="rules_eye">Peraturan</span>
+          <h2 data-i18n="rules_h2">Aturan Server</h2>
+          <p data-i18n="rules_sub">Harap baca dan patuhi semua aturan berikut agar pengalaman bermain tetap menyenangkan untuk semua orang.</p>
+        </div>
+        <div class="rules-grid">
+          <div class="rules-card">
+            <svg class="rules-icon"><use href="#i-shield"/></svg>
+            <h3 data-i18n="rule1_title">Server Rules</h3>
+            <ul class="rules-list">
+              <li>No Hacked Clients</li><li>No Movement Mods</li><li>No Inventory Mods</li>
+              <li>No Health Indicators</li><li>No Radar</li><li>No Freecam</li>
+              <li>No Auto Place</li><li>No Easy Place</li><li>No Macros or Scripts</li>
+              <li>No Abusing Bugs</li><li>No Using Dupe Methods</li><li>No IRL Trading</li>
+              <li>No Invite Rewards</li><li>No Cross Server Trading</li><li>No Finding or Using the Seed</li>
+              <li>No Using More Than 3 Accounts</li><li>No Mouse Tweaks / Scrollers</li><li>No Nitro Boost Rewards</li>
+              <li>No Crafting Modifications</li><li>No Staff Impersonation</li><li>No External Gambling</li>
+            </ul>
+          </div>
+          <div class="rules-card">
+            <svg class="rules-icon"><use href="#i-shield"/></svg>
+            <h3 data-i18n="rule2_title">Chat Rules</h3>
+            <ul class="rules-list">
+              <li>No Spamming</li><li>No Harassing</li><li>No Advertising or Promotion</li>
+              <li>No Discrimination or Hate Speech</li><li>No Death Threats</li>
+              <li>No Sharing Others' Private Information</li><li>No Pretending to be Someone Else</li>
+              <li>No Ban Evasion</li><li>No Lying to Staff Members</li>
+              <li>Report All Bugs, Glitches, and Cheaters</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p data-i18n="foot_copy">© 2026 Cala SMP</p>
+      <div class="foot-links">
+        <a href="https://discord.gg/gHMrYFJQqt" target="_blank">Discord</a>
+        <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank">WhatsApp</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
 <div class="buy-overlay" id="buyOverlay" onclick="closeBuy()"></div>
 <div class="buy-modal" id="buyModal">
   <button class="buy-close" onclick="closeBuy()">✕</button>
-  <div class="buy-icon">🛒</div>
+  <svg class="buy-icon"><use href="#i-store"/></svg>
   <h3 class="buy-title" id="buyTitle">Beli Item</h3>
-  <p class="buy-sub">Pilih metode pembelian</p>
+  <p class="buy-sub" data-i18n="modal_sub">Pilih metode pembelian</p>
   <div class="buy-btns">
     <a class="buy-wa" id="buyWa" href="https://wa.me/6281229029537" target="_blank">
       <span>💬</span>
-      <div>
-        <strong>WhatsApp</strong>
-        <small>Chat langsung ke admin</small>
-      </div>
+      <div><strong data-i18n="wa_title">WhatsApp</strong><small data-i18n="wa_desc">Chat langsung ke admin</small></div>
     </a>
     <a class="buy-dc" href="https://discord.com/users/SirVinnzzz" target="_blank">
       <span>🎮</span>
-      <div>
-        <strong>Discord</strong>
-        <small>DM SirVinnzzz</small>
-      </div>
+      <div><strong>Discord</strong><small data-i18n="dc_desc">DM SirVinnzzz</small></div>
     </a>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
