@@ -127,7 +127,7 @@ function switchPane(name){
   if(name==='home'){ pageSub.setAttribute('data-i18n','topbar_home_sub'); pageSub.textContent=t[lang].topbar_home_sub; pageSub.style.display=''; }
   else { pageSub.style.display='none'; }
 
-  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelector('.topbar').scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 document.querySelectorAll('[data-target]').forEach(el=>{
