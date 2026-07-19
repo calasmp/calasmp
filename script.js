@@ -127,7 +127,11 @@ function switchPane(name){
   if(name==='home'){ pageSub.setAttribute('data-i18n','topbar_home_sub'); pageSub.textContent=t[lang].topbar_home_sub; pageSub.style.display=''; }
   else { pageSub.style.display='none'; }
 
-  document.querySelector('.topbar').scrollIntoView({behavior:'smooth', block:'start'});
+  const topbarEl = document.querySelector('.topbar');
+  if(topbarEl){
+    const y = topbarEl.getBoundingClientRect().top + window.pageYOffset - 12;
+    window.scrollTo({top: y, behavior: 'smooth'});
+  }
 }
 
 document.querySelectorAll('[data-target]').forEach(el=>{
