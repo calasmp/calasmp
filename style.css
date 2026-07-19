@@ -458,9 +458,63 @@ img,svg{max-width:100%}
   .cp-left,.media-left{border-right:none;border-bottom:1px solid var(--border-soft)}
   .media-right{grid-template-columns:1fr}
   .vote-pill span.vp-text{display:none}
-  .top-banner{flex-direction:column;height:auto;padding:18px;gap:14px}
+  .top-banner{flex-direction:column;align-items:flex-start;height:auto;padding:18px;gap:14px}
   .banner-brand{width:100%}
-  .banner-stat-panel{width:100%;justify-content:center;flex-wrap:wrap;border-radius:14px}
+  .banner-stat-panel{width:100%;justify-content:space-between;flex-wrap:wrap;border-radius:14px;padding:10px 14px}
+}
+
+/* ===== MOBILE (phone) — rebuilt for real usability ===== */
+@media(max-width:600px){
+  html{font-size:14.5px}
+  .app{padding:10px;gap:12px}
+
+  /* Banner: full width, stacked, bigger touch targets */
+  .top-banner{padding:16px;border-radius:14px;gap:12px}
+  .banner-brand-logo{width:48px;height:48px}
+  .banner-brand-name{font-size:1.1rem}
+  .banner-stat-panel{gap:10px;padding:10px 12px}
+  .banner-stat-item{font-size:.68rem}
+  .banner-discord-btn{padding:9px 14px;font-size:.75rem}
+
+  /* Sidebar becomes a flat, full-width stack — no cramped box feel */
+  .sidebar-stack{gap:10px}
+  .cat-card,.footer-card{padding:14px 12px;border-radius:12px}
+  .cat-label{padding:0 4px 8px}
+  .cat-link,.cat-sublink{padding:13px 10px;font-size:.92rem}
+  .cat-ico img,.cat-ico svg{width:20px;height:20px}
+  .cat-sublink img{width:17px;height:17px}
+  .cat-chevron{width:14px;height:14px}
+
+  /* Footer buttons: full width, thumb-friendly height */
+  .lang{padding:10px;font-size:.8rem}
+  .side-cta{padding:13px;font-size:.88rem}
+  .side-ip{padding:12px;font-size:.8rem}
+
+  /* Topbar: stack title/vote, keep tap targets roomy */
+  .topbar{padding:14px 16px;gap:10px}
+  .topbar-title h2{font-size:1.05rem}
+  .vote-pill{padding:10px 16px}
+
+  /* Hero: center everything, bigger buttons for thumbs */
+  .hero-left{text-align:center}
+  .hero-left h1{font-size:2.1rem}
+  .hero-btns{justify-content:center}
+  .hero-btns a,.hero-btns button{flex:1 1 auto;min-width:120px;justify-content:center}
+  .vote-cta{width:100%;justify-content:space-between}
+
+  .ip-panel{padding:1.2rem}
+
+  /* Item/tile/money grids: single column so cards aren't squished */
+  .tile-grid{grid-template-columns:1fr}
+  .item-grid{grid-template-columns:1fr}
+  .money-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .calaplus-card,.media-card{border-radius:14px}
+  .cp-left,.media-left{padding:1.4rem 1.2rem}
+  .cp-right,.media-right{padding:1.4rem 1.2rem}
+
+  .rules-grid{grid-template-columns:1fr}
+  .rules-list{max-height:none}
 }
 @media(max-width:460px){
   .app{padding:10px}
