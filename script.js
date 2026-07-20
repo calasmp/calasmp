@@ -105,6 +105,27 @@ const storeFamily=['store','ranks','keys','money','tools'];
 const storeGroup=document.getElementById('storeGroup');
 const storeTrigger=document.getElementById('storeTrigger');
 
+const sidebarEl=document.getElementById('sidebar');
+const sidebarOverlay=document.getElementById('sidebarOverlay');
+const menuBtn=document.getElementById('menuBtn');
+const sidebarClose=document.getElementById('sidebarClose');
+
+function openSidebar(){
+  sidebarEl.classList.add('open');
+  sidebarOverlay.classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeSidebar(){
+  sidebarEl.classList.remove('open');
+  sidebarOverlay.classList.remove('on');
+  document.body.style.overflow='';
+}
+menuBtn.addEventListener('click',()=>{
+  sidebarEl.classList.contains('open') ? closeSidebar() : openSidebar();
+});
+sidebarOverlay.addEventListener('click',closeSidebar);
+sidebarClose.addEventListener('click',closeSidebar);
+
 function switchPane(name){
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('active',p.id===`pane-${name}`));
   document.querySelectorAll('.cat-link[data-target]').forEach(b=>b.classList.toggle('active',b.dataset.target===name));
@@ -136,7 +157,10 @@ function switchPane(name){
 
 document.querySelectorAll('[data-target]').forEach(el=>{
   if(el.id==='storeTrigger') return;
-  el.addEventListener('click',()=>switchPane(el.dataset.target));
+  el.addEventListener('click',()=>{
+    switchPane(el.dataset.target);
+    if(window.innerWidth<=860) closeSidebar();
+  });
 });
 
 storeTrigger.addEventListener('click',()=>{
@@ -195,4 +219,4 @@ function closeBuy(){
   document.getElementById('buyModal').classList.remove('on');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBuy();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBuy();closeSidebar();}});
