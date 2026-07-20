@@ -7,7 +7,7 @@
 <link rel="icon" href="img/cala.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
 <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
 <symbol id="i-store" viewBox="0 0 24 24"><path d="M12 2 L20 8 L20 21 L4 21 L4 8 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 21 V14 H15 V21" stroke="currentColor" stroke-width="1.6" fill="none"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </defs>
 </svg>
 
@@ -62,6 +63,7 @@
   </div>
 
   <aside class="sidebar-stack" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Tutup menu">✕</button>
 
     <div class="cat-card">
       <div class="cat-label" data-i18n="categories_lbl">Kategori</div>
@@ -109,9 +111,14 @@
 
   </aside>
 
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <div class="main">
     <header class="topbar">
       <div class="topbar-glow"></div>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">
+        <svg><use href="#i-menu"/></svg>
+      </button>
       <div class="topbar-title">
         <h2 id="pageTitle" data-i18n="nav_home">Beranda</h2>
         <p id="pageSub" data-i18n="topbar_home_sub">Welcome to Cala SMP!</p>
