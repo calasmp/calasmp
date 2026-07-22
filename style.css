@@ -463,6 +463,7 @@ img,svg{max-width:100%}
     -webkit-overflow-scrolling:touch;
     overscroll-behavior:contain;
     touch-action:pan-y;
+    height:100vh;
     height:100dvh;
   }
   .sidebar-stack.open{transform:translateX(0)}
