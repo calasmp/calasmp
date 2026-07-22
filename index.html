@@ -140,7 +140,6 @@
             <p class="hero-lead" data-i18n="hero_lead">Server survival Indonesia terinspirasi Donut SMP — terbuka untuk semua pemain, termasuk yang tidak memiliki akun premium. Rasakan pengalaman SMP seru bersama komunitas yang aktif.</p>
             <div class="hero-btns">
               <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" class="btn-main" data-i18n="btn_join">Gabung WhatsApp</a>
-              <a href="https://discord.gg/gHMrYFJQqt" target="_blank" class="btn-discord" data-i18n="btn_discord">Discord</a>
               <button class="btn-ghost" id="copyBtn" data-i18n="btn_copy">Salin IP</button>
             </div>
             <a href="https://minecraft-mp.com/server/359580/vote/" target="_blank" class="vote-cta">
@@ -153,6 +152,16 @@
               </div>
               <span class="vote-cta-arrow">→</span>
             </a>
+            <button type="button" onclick="switchPane('store')" class="vote-cta store-cta">
+              <div class="vote-cta-left">
+                <img class="vote-cta-ico" src="img/Emerald.png" alt="">
+                <div class="vote-cta-text">
+                  <strong data-i18n="nav_store">Toko</strong>
+                  <span data-i18n="store_sub">Support server!</span>
+                </div>
+              </div>
+              <span class="vote-cta-arrow">→</span>
+            </button>
           </div>
 <div class="hero-right">
             <div class="ip-panel">
@@ -187,22 +196,13 @@
           </div>
         </div>
 
-        <div class="home-store-cta" onclick="switchPane('store')">
-          <div class="hsc-icon"><img src="img/Emerald.png" alt=""></div>
-          <div class="hsc-text">
-            <h3 data-i18n="nav_store">Toko</h3>
-            <p data-i18n="store_sub">Semua pembelian mendukung keberlangsungan server.</p>
-          </div>
-          <span class="hsc-arrow">→</span>
-        </div>
-
       </section>
 
       <section class="pane" id="pane-store">
         <div class="pane-intro">
           <span class="eyebrow" data-i18n="store_eye">Toko Server</span>
           <h2 data-i18n="store_h2">Rank, Key & Money</h2>
-          <p data-i18n="store_sub">Semua pembelian mendukung keberlangsungan server.</p>
+          <p data-i18n="store_sub">Support server!</p>
         </div>
         <div class="tile-grid">
           <div class="tile" data-target="ranks">
