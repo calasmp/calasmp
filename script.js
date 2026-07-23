@@ -9,7 +9,7 @@ btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'S
 vote_cta_title:'Vote Sekarang!',vote_mini:'Dapatkan Money + Shards gratis',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Pemain',stat_season:'Season',stat_uptime:'Uptime',
-store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Semua pembelian mendukung keberlangsungan server.',
+store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Support server!',
 tile_ranks_d:'Prefix keren, unlock sethome, kit harian, dan slot ekonomi lebih besar.',
 tile_keys_d:'Buka loot box buat dapetin item langka.',
 tile_money_d:'Top up in-game money',
@@ -53,7 +53,7 @@ btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy
 vote_cta_title:'Vote Now!',vote_mini:'Get free Money + Shards',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Players',stat_season:'Season',stat_uptime:'Uptime',
-store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'All purchases support server operations.',
+store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'Support the server!',
 tile_ranks_d:'Level up your status — unlock sethomes, daily kits, and bigger economy slots.',
 tile_keys_d:'Open loot boxes from Gold to Amethyst for a shot at rare items.',
 tile_money_d:'Top up in-game money',
@@ -122,7 +122,7 @@ function openSidebar(){
   document.body.style.width='100%';
   document.body.style.overflow='hidden';
 }
-function closeSidebar(){
+function closeSidebar(restoreScroll = true){
   sidebarEl.classList.remove('open');
   sidebarOverlay.classList.remove('on');
   document.body.style.position='';
@@ -131,7 +131,7 @@ function closeSidebar(){
   document.body.style.right='';
   document.body.style.width='';
   document.body.style.overflow='';
-  window.scrollTo(0,scrollY);
+  if(restoreScroll) window.scrollTo(0,scrollY);
 }
 menuBtn.addEventListener('click',()=>{
   sidebarEl.classList.contains('open') ? closeSidebar() : openSidebar();
