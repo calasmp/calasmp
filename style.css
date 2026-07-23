@@ -444,7 +444,7 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 
 @media(max-width:860px){
   .app{padding:16px}
-  .app-body{flex-direction:column;gap:16px}
+  .app-body{flex-direction:column;align-items:stretch;gap:16px}
   .hero-grid{grid-template-columns:1fr}
   .hero-glow{display:none}
 
