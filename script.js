@@ -5,7 +5,7 @@ topbar_home_sub:'Welcome to Cala SMP!',btn_vote_short:'Vote',playing_lbl:'pemain
 categories_lbl:'Kategori',
 tag:'Free-to-Play · Crack All Version',
 hero_lead:'Server survival Indonesia terinspirasi Donut SMP — terbuka untuk semua pemain, termasuk yang tidak memiliki akun premium. Rasakan pengalaman SMP seru bersama komunitas yang aktif.',
-btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'Salin calasmp.xyz:19165',
+btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'Salin calasmp.xyz:12011',
 vote_cta_title:'Vote Sekarang!',vote_mini:'Dapatkan Money + Shards gratis',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Pemain',stat_season:'Season',stat_uptime:'Uptime',
@@ -49,7 +49,7 @@ topbar_home_sub:'Cala SMP main dashboard',btn_vote_short:'Vote',playing_lbl:'pla
 categories_lbl:'Categories',
 tag:'Free-to-Play · Crack All Version',
 hero_lead:'An Indonesian survival server inspired by Donut SMP — open to all players, including those without a premium account. Experience fun SMP gameplay with an active community.',
-btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy calasmp.xyz:19165',
+btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy calasmp.xyz:12011',
 vote_cta_title:'Vote Now!',vote_mini:'Get free Money + Shards',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Players',stat_season:'Season',stat_uptime:'Uptime',
@@ -185,7 +185,7 @@ storeTrigger.addEventListener('click',()=>{
 });
 
 function copyIP(){
-  navigator.clipboard.writeText('calasmp.xyz:19165').then(()=>{
+  navigator.clipboard.writeText('calasmp.xyz:12011').then(()=>{
     const toast=document.getElementById('toast');
     toast.textContent=t[lang].toast_ok;
     toast.classList.add('on');
@@ -199,7 +199,7 @@ document.getElementById('copyIp').addEventListener('click',copyIP);
 async function updateServerStatus(){
   const statusEl=document.getElementById('serverStatus');
   try{
-    const res=await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:19165');
+    const res=await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:12011');
     const data=await res.json();
     if(data.online){
       document.getElementById('playerCount').textContent=data.players.online;
