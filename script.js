@@ -199,7 +199,7 @@ document.getElementById('copyIp').addEventListener('click',copyIP);
 async function updateServerStatus(){
   const statusEl=document.getElementById('serverStatus');
   try{
-    const res=await fetch('https://api.mcstatus.io/v2/status/java/basic-2.mineidhost.icu:12011');
+    const res=await fetch('https://api.mcstatus.io/v2/status/java/185.207.166.34:24045');
     const data=await res.json();
     if(data.online){
       document.getElementById('playerCount').textContent=data.players.online;
