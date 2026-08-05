@@ -319,6 +319,7 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 .stat{display:flex;flex-direction:column;align-items:center;gap:.15rem}
 .stat-n{font-size:1rem;font-weight:700;font-family:var(--font-mono)}
 .stat-l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.stat-countdown{font-size:.58rem;color:var(--blue2);font-weight:700;margin-top:1px;font-family:var(--font-mono)}
 .stat-div{width:1px;height:24px;background:var(--border);flex-shrink:0}
 .copy-bar{display:flex;align-items:center;gap:.6rem;justify-content:center;width:100%;background:rgba(42,143,255,.08);border:1px dashed rgba(42,143,255,.3);color:var(--muted);padding:.65rem;border-radius:7px;cursor:pointer;font-size:.79rem;transition:var(--t)}
 .copy-bar:hover{border-color:var(--blue2);color:var(--blue2);transform:translateY(-1px)}
@@ -348,6 +349,9 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 .cp-badge span{color:var(--blue2)}
 .calaplus-card.pp .cp-badge span{color:var(--amethyst)}
 .cp-price{font-size:1.08rem;font-weight:700;font-family:var(--font-mono)}
+.cp-price-wrap{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.cp-price-old{font-size:.78rem;font-weight:600;font-family:var(--font-mono);color:var(--muted);text-decoration:line-through;text-decoration-color:var(--crimson)}
+.cp-price-new{font-size:1.35rem;font-weight:800;font-family:var(--font-mono);color:var(--green)}
 .cp-right{padding:1.9rem 1.7rem;min-width:0}
 .cp-right h4{font-size:.73rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
 .cp-perks{list-style:none;display:flex;flex-direction:column;gap:.68rem}
@@ -521,6 +525,7 @@ html{scroll-behavior:smooth;overflow-x:hidden}
   .cp-right,.media-right{padding:1.4rem 1.2rem}
   .rules-grid{grid-template-columns:1fr}
   .rules-list{max-height:none}
+  .cp-price-wrap{flex-direction:column;align-items:flex-start;gap:.1rem}
 }
 @media(max-width:460px){
   .app{padding:10px}
