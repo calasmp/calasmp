@@ -9,7 +9,7 @@ btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'S
 vote_cta_title:'Vote Sekarang!',vote_mini:'Dapatkan Money + Shards gratis',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Pemain',stat_season:'Season',stat_uptime:'Uptime',
-store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Support server!',
+store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Semua pembelian mendukung keberlangsungan server.',
 tile_ranks_d:'Prefix keren, unlock sethome, kit harian, dan slot ekonomi lebih besar.',
 tile_keys_d:'Buka loot box buat dapetin item langka.',
 tile_money_d:'Top up in-game money',
@@ -17,9 +17,9 @@ tile_tools_d:'Tools yang keren dan membantu mendapatkan lebih banyak money',
 open_menu:'Buka →',
 ranks_h2:'Rank Server',ranks_sub:'Dapatkan banyak benefit dengan membeli rank!',
 cp_benefit:'Benefit Cala+',btn_buy:'Beli Sekarang',
-cp1:'Unlock semua sethome',cp2:'Claim kit Cala+ setiap hari',cp3:'Auction limit 25 slot',cp4:'Order limit 25 slot',cp5:'Berlaku 1 season penuh',
+cp1:'Unlock semua sethome',cp2:'Claim kit Cala+ setiap hari (bonus spawner+ everyday)',cp3:'Auction limit 25 slot',cp4:'Order limit 25 slot',cp5:'Berlaku 1 season penuh',
 cpp_benefit:'Benefit Cala++',
-cpp1:'Unlock semua sethome',cpp2:'Claim kit Cala+ setiap hari',cpp3:'Claim kit Cala++ setiap hari',cpp4:'Auction limit 35 slot',cpp5:'Order limit 35 slot',cpp6:'/ec — buka Ender Chest dari mana saja',cpp7:'/anvil — buka Anvil dari mana saja',cpp8:'Berlaku 1 season penuh',cpp9:'/ahfastbuy & /ahfastsell',
+cpp1:'Unlock semua sethome',cpp2:'Claim kit Cala+ setiap hari',cpp3:'Claim kit Cala++ setiap hari (bonus spawner++ everyday)',cpp4:'Auction limit 35 slot',cpp5:'Order limit 35 slot',cpp6:'/ec — buka Ender Chest dari mana saja',cpp7:'/anvil — buka Anvil dari mana saja',cpp8:'Berlaku 1 season penuh',cpp9:'/ahfastbuy & /ahfastsell',
 keys_h2:'Key Crate',keys_sub:'Dapatkan Tools dan armor spesial dari loot box!',
 key_gold:'Gold Key',key_gold_d:'Buka loot box Gold tier',
 key_crimson:'Crimson Key',key_crimson_d:'Buka loot box Crimson tier',
@@ -32,6 +32,7 @@ tools_h2:'Amethyst Tools 1 Bulan',tools_sub:'Dapatkan tools Amethyst yang berdur
 am_sword:'Tree Chopper (1mo)',am_sword_d:'Nebang pohon hanya dengan 1 klik',
 am_axe:'Sell Axe (1mo)',am_axe_d:'Auto-sell isi chest langsung masuk money kamu.',
 am_pickaxe:'Amethyst Drill (1mo)',am_pickaxe_d:'Mining jauh lebih cepat dengan 3x3 block',
+am_pickaxe_perm:'Amethyst Drill (Permanent)',am_pickaxe_perm_d:'Mining jauh lebih cepat dengan 3x3 block, berlaku selamanya.',
 am_shard:'4X Shard Booster (3d)',am_shard_d:'Dapatkan 4 shard setiap menit selama 3 hari.',
 media_eye:'Content Creator',media_h2:'Rank Media',media_sub:'Kamu content creator? Daftarkan dirimu dan dapatkan rank eksklusif.',
 media_free:'✦ Gratis / Free',media_note:'Berlaku selama 1 season',media_apply:'Daftar Sekarang',media_req:'Requirement',media_ben:'Benefit',
@@ -45,7 +46,7 @@ toast_ok:'✓ Disalin ke clipboard!'
 },
 en:{
 nav_home:'Home',nav_store:'Store',nav_ranks:'Ranks',nav_keys:'Keys',nav_money:'Balance',nav_tools:'Amethyst Tools',nav_media:'Media Partner',nav_rules:'Server Rules',
-topbar_home_sub:'Cala SMP main dashboard',btn_vote_short:'Vote',playing_lbl:'players online',members_lbl:'total members',
+topbar_home_sub:'Welcome to Cala SMP!',btn_vote_short:'Vote',playing_lbl:'players online',members_lbl:'total members',
 categories_lbl:'Categories',
 tag:'Free-to-Play · Crack All Version',
 hero_lead:'An Indonesian survival server inspired by Donut SMP — open to all players, including those without a premium account. Experience fun SMP gameplay with an active community.',
@@ -53,30 +54,31 @@ btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy
 vote_cta_title:'Vote Now!',vote_mini:'Get free Money + Shards',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
 stat_players:'Players',stat_season:'Season',stat_uptime:'Uptime',
-store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'Support the server!',
-tile_ranks_d:'Level up your status — unlock sethomes, daily kits, and bigger economy slots.',
-tile_keys_d:'Open loot boxes from Gold to Amethyst for a shot at rare items.',
+store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'Every purchase supports the server.',
+tile_ranks_d:'Cool prefix, unlock sethome, daily kits, and bigger economy slots.',
+tile_keys_d:'Open loot boxes to get rare items.',
 tile_money_d:'Top up in-game money',
-tile_tools_d:'Custom weapons and armor, with defense above regular diamond.',
+tile_tools_d:'Cool tools that help you earn more money',
 open_menu:'Open →',
-ranks_h2:'Server Ranks',ranks_sub:'Pick the rank that fits how you play.',
+ranks_h2:'Server Ranks',ranks_sub:'Get lots of benefits by buying a rank!',
 cp_benefit:'Cala+ Benefits',btn_buy:'Buy Now',
-cp1:'Unlock all sethome',cp2:'Claim Cala+ kit every day',cp3:'Auction limit 25 slots',cp4:'Order limit 25 slots',cp5:'Valid for 1 full season',
+cp1:'Unlock all sethome',cp2:'Claim Cala+ kit every day (bonus spawner+ everyday)',cp3:'Auction limit 25 slots',cp4:'Order limit 25 slots',cp5:'Valid for 1 full season',
 cpp_benefit:'Cala++ Benefits',
-cpp1:'Unlock all sethome',cpp2:'Claim Cala+ kit every day',cpp3:'Claim Cala++ kit every day',cpp4:'Auction limit 35 slots',cpp5:'Order limit 35 slots',cpp6:'/ec — open Ender Chest anywhere',cpp7:'/anvil — open Anvil anywhere',cpp8:'Valid for 1 full season',cpp9:'/ahfastbuy & /ahfastsell',
-keys_h2:'Crate Keys',keys_sub:'Four loot box tiers — drop rates improve the higher you go.',
+cpp1:'Unlock all sethome',cpp2:'Claim Cala+ kit every day',cpp3:'Claim Cala++ kit every day (bonus spawner++ everyday)',cpp4:'Auction limit 35 slots',cpp5:'Order limit 35 slots',cpp6:'/ec — open Ender Chest anywhere',cpp7:'/anvil — open Anvil anywhere',cpp8:'Valid for 1 full season',cpp9:'/ahfastbuy & /ahfastsell',
+keys_h2:'Crate Keys',keys_sub:'Get special tools and armor from loot boxes!',
 key_gold:'Gold Key',key_gold_d:'Open a Gold tier loot box',
 key_crimson:'Crimson Key',key_crimson_d:'Open a Crimson tier loot box',
 key_prime:'Prime Key',key_prime_d:'Open a Prime tier loot box',
 key_amethyst:'Amethyst Key',key_amethyst_d:'Open an exclusive Amethyst tier loot box',
 btn_buy_short:'Buy',
-money_h2:'In-Game Money',money_sub:'Top up anything from pocket change to a 50-million bundle.',
-money_label:'In-Game Money',hot:'Most Popular',custom_title:'Custom',custom_sub:'Request any amount you need.',btn_contact:'Contact Admin',
-tools_h2:'Amethyst Tools 1 Bulan',tools_sub:'Get Amethyst tools for a 1 month duration.',
-am_sword:'Tree Chopper (1mo)',am_sword_d:'Chops trees at lightning speed, great for wood farming.',
-am_axe:'Sell Axe (1mo)',am_axe_d:'Auto-sells your logs straight into your balance.',
-am_pickaxe:'Amethyst Drill (1mo)',am_pickaxe_d:'The efficiency boost is very noticeable on a big ore vein.',
-am_shard:'4X Shard Booster (3d)',am_shard_d:'A potion bottle that boosts your Amethyst drop rate while active.',
+money_h2:'In-Game Money',money_sub:'Top up starting from 2k',
+money_label:'In-Game Money',hot:'Most Popular',custom_title:'Custom',custom_sub:'Request any amount of money you need.',btn_contact:'Contact Admin',
+tools_h2:'Amethyst Tools 1 Month',tools_sub:'Get Amethyst tools valid for 1 month.',
+am_sword:'Tree Chopper (1mo)',am_sword_d:'Chop trees with just 1 click',
+am_axe:'Sell Axe (1mo)',am_axe_d:'Auto-sells your chest contents straight into your money.',
+am_pickaxe:'Amethyst Drill (1mo)',am_pickaxe_d:'Mine much faster with a 3x3 block area',
+am_pickaxe_perm:'Amethyst Drill (Permanent)',am_pickaxe_perm_d:'Mine much faster with a 3x3 block area, valid forever.',
+am_shard:'4X Shard Booster (3d)',am_shard_d:'Get 4 shards every minute for 3 days.',
 media_eye:'Content Creator',media_h2:'Media Rank',media_sub:'Are you a content creator? Apply now and get an exclusive rank.',
 media_free:'✦ Free of Charge',media_note:'Valid for 1 season',media_apply:'Apply Now',media_req:'Requirements',media_ben:'Benefits',
 mr1:'500 total livestream views',mr2:'2,000 views on TikTok or YouTube',
@@ -233,3 +235,19 @@ function closeBuy(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBuy();closeSidebar();}});
+
+function updateSeasonCountdown(){
+  const end = new Date('2026-12-15T00:00:00');
+  const now = new Date();
+  let months = (end.getFullYear()-now.getFullYear())*12 + (end.getMonth()-now.getMonth());
+  let days = end.getDate()-now.getDate();
+  if(days<0){
+    months--;
+    days += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
+  }
+  if(months<0){months=0;days=0;}
+  const el=document.getElementById('seasonCountdown');
+  if(el) el.textContent = months>0 ? `${months}bln ${days}hr lagi` : `${days}hr lagi`;
+}
+updateSeasonCountdown();
+setInterval(updateSeasonCountdown, 3600000);
