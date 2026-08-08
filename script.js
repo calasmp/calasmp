@@ -8,18 +8,22 @@ hero_lead:'Server survival Indonesia terinspirasi Donut SMP — terbuka untuk se
 btn_join:'Gabung WhatsApp',btn_discord:'Discord',btn_copy:'Salin IP',copy_bar:'Salin calasmp.xyz:12011',
 vote_cta_title:'Vote Sekarang!',vote_mini:'Dapatkan Money + Shards gratis',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
-stat_players:'Pemain',stat_season:'Season',stat_uptime:'Uptime',
+stat_players:'Pemain',stat_uptime:'Uptime',
 store_eye:'Toko Server',store_h2:'Rank, Key & Money',store_sub:'Semua pembelian mendukung keberlangsungan server.',
 tile_ranks_d:'Prefix keren, unlock sethome, kit harian, dan slot ekonomi lebih besar.',
 tile_keys_d:'Buka loot box buat dapetin item langka.',
 tile_money_d:'Top up in-game money',
 tile_tools_d:'Tools yang keren dan membantu mendapatkan lebih banyak money',
 open_menu:'Buka →',
-ranks_h2:'Rank Server',ranks_sub:'Dapatkan banyak benefit dengan membeli rank!',
+ranks_h2:'Rank Server',ranks_sub:'Semua kit bisa di <strong>claim setiap hari</strong>',
 cp_benefit:'Benefit Cala+',btn_buy:'Beli Sekarang',
-cp1:'Unlock semua sethome',cp2:'Claim kit Cala+ setiap hari (bonus spawner+ everyday)',cp3:'Auction limit 25 slot',cp4:'Order limit 25 slot',cp5:'Berlaku 1 season penuh',
+cp1:'Unlock semua sethome',cp2:'Claim kit Cala+ setiap hari',cp3:'Auction limit 25 slot',cp4:'Order limit 25 slot',
 cpp_benefit:'Benefit Cala++',
-cpp1:'Unlock semua sethome',cpp2:'Claim kit Cala+ setiap hari',cpp3:'Claim kit Cala++ setiap hari (bonus spawner++ everyday)',cpp4:'Auction limit 35 slot',cpp5:'Order limit 35 slot',cpp6:'/ec — buka Ender Chest dari mana saja',cpp7:'/anvil — buka Anvil dari mana saja',cpp8:'Berlaku 1 season penuh',cpp9:'/ahfastbuy & /ahfastsell',
+cpp1:'Unlock semua sethome',cppkit:'Claim kit (Cala+, Cala++)',cpp4:'Auction limit 35 slot',cpp5:'Order limit 35 slot',cpp6:'/enderchest',cpp7:'/anvil',cpp9:'/ahfastbuy & /ahfastsell',
+custom_badge:'CUSTOM',custom_benefit:'Benefit Custom',custom_promo:'Diskon rank baru!',
+c1:'Semua benefit Cala+ & Cala++',c2:'Claim kit (Cala+, Cala++, Custom)',c3:'Auction limit 40 slot',c4:'Order limit 40 slot',c5:'/craft',c6:'/recipe — lihat resep crafting',c7:'/smithingtable',c8:'/grindstone',c9:'/Compass & fitur lainnya',c10:'Bebas request prefix nama rank',
+donatur_badge:'DONATUR',donatur_benefit:'Benefit Donatur',donatur_promo:'Diskon rank baru!',
+d_unlock:'Unlock semua sethome',d_kit:'Claim kit (Cala+, Cala++, Custom, Donatur) — cooldown hanya 24 jam',d_bonus:'',d_auction:'Auction limit 40 slot',d_order:'Order limit 40 slot',d_ec:'/enderchest',d_anvil:'/anvil',d_ah:'/ahfastbuy & /ahfastsell',d_craft:'/craft',d_recipe:'/recipe — lihat resep crafting',d_smith:'/smithingtable',d_grind:'/grindstone',d_compass:'/Compass & fitur lainnya',d_prefix:'Bebas request prefix nama rank',
 keys_h2:'Key Crate',keys_sub:'Dapatkan Tools dan armor spesial dari loot box!',
 key_gold:'Gold Key',key_gold_d:'Buka loot box Gold tier',
 key_crimson:'Crimson Key',key_crimson_d:'Buka loot box Crimson tier',
@@ -35,9 +39,9 @@ am_pickaxe:'Amethyst Drill (1mo)',am_pickaxe_d:'Mining jauh lebih cepat dengan 3
 am_pickaxe_perm:'Amethyst Drill (Permanent)',am_pickaxe_perm_d:'Mining jauh lebih cepat dengan 3x3 block, berlaku selamanya.',
 am_shard:'4X Shard Booster (3d)',am_shard_d:'Dapatkan 4 shard setiap menit selama 3 hari.',
 media_eye:'Content Creator',media_h2:'Rank Media',media_sub:'Kamu content creator? Daftarkan dirimu dan dapatkan rank eksklusif.',
-media_free:'✦ Gratis / Free',media_note:'Berlaku selama 1 season',media_apply:'Daftar Sekarang',media_req:'Requirement',media_ben:'Benefit',
-mr1:'500 total views livestream',mr2:'2.000 views di TikTok atau YouTube',
-mb1:'Unlock semua sethome',mb2:'Prefix "media" di tab & chat (warna ungu)',mb3:'Berlaku 1 season penuh',
+media_free:'✦ Gratis / Free',media_note:'Berlaku selama 1 bulan',media_apply:'Daftar Sekarang',media_req:'Requirement',media_ben:'Benefit',
+mr1:'500 total views livestream',mr2:'5.000 views di TikTok atau YouTube',
+mb1:'Unlock semua sethome',mb_kit:'Claim kit media',mb2:'Prefix "media" di tab & chat (warna ungu)',mb3:'Berlaku 1 bulan',
 rules_eye:'Peraturan',rules_h2:'Aturan Server',rules_sub:'Harap baca dan patuhi semua aturan berikut agar pengalaman bermain tetap menyenangkan untuk semua orang.',
 rule1_title:'Server Rules',rule2_title:'Chat Rules',
 foot_copy:'© 2026 Cala SMP',
@@ -53,18 +57,22 @@ hero_lead:'An Indonesian survival server inspired by Donut SMP — open to all p
 btn_join:'Join WhatsApp',btn_discord:'Discord',btn_copy:'Copy IP',copy_bar:'Copy calasmp.xyz:12011',
 vote_cta_title:'Vote Now!',vote_mini:'Get free Money + Shards',
 lbl_java:'Java Edition',lbl_bedrock:'Bedrock Edition',
-stat_players:'Players',stat_season:'Season',stat_uptime:'Uptime',
+stat_players:'Players',stat_uptime:'Uptime',
 store_eye:'Server Store',store_h2:'Rank, Key & Money',store_sub:'Every purchase supports the server.',
 tile_ranks_d:'Cool prefix, unlock sethome, daily kits, and bigger economy slots.',
 tile_keys_d:'Open loot boxes to get rare items.',
 tile_money_d:'Top up in-game money',
 tile_tools_d:'Cool tools that help you earn more money',
 open_menu:'Open →',
-ranks_h2:'Server Ranks',ranks_sub:'Get lots of benefits by buying a rank!',
+ranks_h2:'Server Ranks',ranks_sub:'All kits can be <strong>claimed every day</strong>',
 cp_benefit:'Cala+ Benefits',btn_buy:'Buy Now',
-cp1:'Unlock all sethome',cp2:'Claim Cala+ kit every day (bonus spawner+ everyday)',cp3:'Auction limit 25 slots',cp4:'Order limit 25 slots',cp5:'Valid for 1 full season',
+cp1:'Unlock all sethome',cp2:'Claim Cala+ kit every day',cp3:'Auction limit 25 slots',cp4:'Order limit 25 slots',
 cpp_benefit:'Cala++ Benefits',
-cpp1:'Unlock all sethome',cpp2:'Claim Cala+ kit every day',cpp3:'Claim Cala++ kit every day (bonus spawner++ everyday)',cpp4:'Auction limit 35 slots',cpp5:'Order limit 35 slots',cpp6:'/ec — open Ender Chest anywhere',cpp7:'/anvil — open Anvil anywhere',cpp8:'Valid for 1 full season',cpp9:'/ahfastbuy & /ahfastsell',
+cpp1:'Unlock all sethome',cppkit:'Claim kit (Cala+, Cala++)',cpp4:'Auction limit 35 slots',cpp5:'Order limit 35 slots',cpp6:'/enderchest',cpp7:'/anvil',cpp9:'/ahfastbuy & /ahfastsell',
+custom_badge:'CUSTOM',custom_benefit:'Custom Benefits',custom_promo:'New rank discount!',
+c1:'All Cala+ & Cala++ benefits',c2:'Claim kit (Cala+, Cala++, Custom)',c3:'Auction limit 40 slots',c4:'Order limit 40 slots',c5:'/craft',c6:'/recipe — view crafting recipes',c7:'/smithingtable',c8:'/grindstone',c9:'/Compass & fitur lainnya',c10:'Free custom rank prefix request',
+donatur_badge:'DONATUR',donatur_benefit:'Donatur Benefits',donatur_promo:'New rank discount!',
+d_unlock:'Unlock all sethome',d_kit:'Claim kit (Cala+, Cala++, Custom, Donatur) — 24 hour cooldown only',d_bonus:'',d_auction:'Auction limit 40 slots',d_order:'Order limit 40 slots',d_ec:'/enderchest',d_anvil:'/anvil',d_ah:'/ahfastbuy & /ahfastsell',d_craft:'/craft',d_recipe:'/recipe — view crafting recipes',d_smith:'/smithingtable',d_grind:'/grindstone',d_compass:'/Compass & fitur lainnya',d_prefix:'Free custom rank prefix request',
 keys_h2:'Crate Keys',keys_sub:'Get special tools and armor from loot boxes!',
 key_gold:'Gold Key',key_gold_d:'Open a Gold tier loot box',
 key_crimson:'Crimson Key',key_crimson_d:'Open a Crimson tier loot box',
@@ -80,9 +88,9 @@ am_pickaxe:'Amethyst Drill (1mo)',am_pickaxe_d:'Mine much faster with a 3x3 bloc
 am_pickaxe_perm:'Amethyst Drill (Permanent)',am_pickaxe_perm_d:'Mine much faster with a 3x3 block area, valid forever.',
 am_shard:'4X Shard Booster (3d)',am_shard_d:'Get 4 shards every minute for 3 days.',
 media_eye:'Content Creator',media_h2:'Media Rank',media_sub:'Are you a content creator? Apply now and get an exclusive rank.',
-media_free:'✦ Free of Charge',media_note:'Valid for 1 season',media_apply:'Apply Now',media_req:'Requirements',media_ben:'Benefits',
-mr1:'500 total livestream views',mr2:'2,000 views on TikTok or YouTube',
-mb1:'Unlock all sethome',mb2:'"media" prefix in chat and tab (purple)',mb3:'Valid for 1 full season',
+media_free:'✦ Free of Charge',media_note:'Valid for 1 month',media_apply:'Apply Now',media_req:'Requirements',media_ben:'Benefits',
+mr1:'500 total livestream views',mr2:'5,000 views on TikTok or YouTube',
+mb1:'Unlock all sethome',mb_kit:'Claim media kit',mb2:'"media" prefix in chat and tab (purple)',mb3:'Valid for 1 month',
 rules_eye:'Rules',rules_h2:'Server Rules',rules_sub:'Please read and follow all rules below to keep the experience fun for everyone.',
 rule1_title:'Server Rules',rule2_title:'Chat Rules',
 foot_copy:'© 2026 Cala SMP',
@@ -96,7 +104,10 @@ function setLang(l){
   lang=l;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.dataset.i18n;
-    if(t[l][k]!==undefined) el.textContent=t[l][k];
+    if(t[l][k]!==undefined){
+      if(el.dataset.i18nHtml){ el.innerHTML=t[l][k]; }
+      else{ el.textContent=t[l][k]; }
+    }
   });
   document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
 }
@@ -235,19 +246,3 @@ function closeBuy(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeBuy();closeSidebar();}});
-
-function updateSeasonCountdown(){
-  const end = new Date('2026-12-15T00:00:00');
-  const now = new Date();
-  let months = (end.getFullYear()-now.getFullYear())*12 + (end.getMonth()-now.getMonth());
-  let days = end.getDate()-now.getDate();
-  if(days<0){
-    months--;
-    days += new Date(end.getFullYear(), end.getMonth(), 0).getDate();
-  }
-  if(months<0){months=0;days=0;}
-  const el=document.getElementById('seasonCountdown');
-  if(el) el.textContent = months>0 ? `${months}bln ${days}hr lagi` : `${days}hr lagi`;
-}
-updateSeasonCountdown();
-setInterval(updateSeasonCountdown, 3600000);
