@@ -185,9 +185,8 @@
                 <div class="stat"><span class="stat-n" id="playerCount">--</span><span class="stat-l" data-i18n="stat_players">Pemain</span></div>
                 <div class="stat-div"></div>
                 <div class="stat">
-  <span class="stat-n">1</span>
-  <span class="stat-l" data-i18n="stat_season">Season</span>
-  <span class="stat-countdown" id="seasonCountdown">4bln 12hr</span>
+  <span class="stat-n">S1</span>
+  <span class="stat-l">S2 in 2027</span>
 </div>
                 <div class="stat-div"></div>
                 <div class="stat"><span class="stat-n">24/7</span><span class="stat-l" data-i18n="stat_uptime">Uptime</span></div>
@@ -240,7 +239,7 @@
         <div class="pane-intro">
           <span class="eyebrow" data-i18n="nav_ranks">Rank</span>
           <h2 data-i18n="ranks_h2">Rank Server</h2>
-          <p data-i18n="ranks_sub">Dapatkan banyak benefit dengan membeli rank!</p>
+          <p data-i18n="ranks_sub" data-i18n-html="true">Semua kit bisa di <strong>claim setiap hari</strong></p>
         </div>
         <div class="calaplus-wrap">
           <div class="calaplus-card">
@@ -260,7 +259,6 @@
                 <li><span class="perk-dash">—</span><span data-i18n="cp2">Claim kit Cala+ setiap hari (bonus spawner+ everyday)</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="cp3">Auction limit 25 slot</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="cp4">Order limit 25 slot</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cp5">Berlaku 1 season penuh</span></li>
               </ul>
             </div>
           </div>
@@ -280,14 +278,74 @@
               <h4 data-i18n="cpp_benefit">Benefit Cala++</h4>
               <ul class="cp-perks">
                 <li><span class="perk-dash">—</span><span data-i18n="cpp1">Unlock semua sethome</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cpp2">Claim kit Cala+ setiap hari</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cpp3">Claim kit Cala++ setiap hari (bonus spawner++ everyday)</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cppkit">Claim kit (Cala+, Cala++)</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="cpp4">Auction limit 35 slot</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="cpp5">Order limit 35 slot</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cpp6">/ec — buka Ender Chest dari mana saja</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cpp7">/anvil — buka Anvil dari mana saja</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp6">/enderchest</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="cpp7">/anvil</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="cpp9">/ahfastbuy & /ahfastsell</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="cpp8">Berlaku 1 season penuh</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="calaplus-wrap">
+          <div class="calaplus-card custom">
+            <div class="cp-left">
+              <img class="cp-icon" src="img/White_Dye.png" alt="">
+              <div class="cp-badge" data-i18n="custom_badge">CUSTOM</div>
+              <div class="cp-price-wrap">
+                <span class="cp-price-old">Rp 250.000</span>
+                <span class="cp-price-new">Rp 200.000</span>
+              </div>
+              <span class="cp-promo-tag" data-i18n="custom_promo">Diskon rank baru!</span>
+              <button class="btn-main" style="background:#f2f4f8;color:#0b0f1a" onclick="openBuy('Rank Custom')" data-i18n="btn_buy">Beli Sekarang</button>
+            </div>
+            <div class="cp-right">
+              <h4 data-i18n="custom_benefit">Benefit Custom</h4>
+              <ul class="cp-perks">
+                <li><span class="perk-dash">—</span><span data-i18n="c1">Semua benefit Cala+ & Cala++</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c2">Claim kit (Cala+, Cala++, Custom)</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c3">Auction limit 40 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c4">Order limit 40 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c5">/craft</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c6">/recipe — lihat resep crafting</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c7">/smithingtable</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c8">/grindstone</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c9">/Compass & fitur lainnya</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="c10">Bebas request prefix nama rank</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="calaplus-wrap">
+          <div class="calaplus-card donatur">
+            <div class="cp-left">
+              <img class="cp-icon" src="img/Emerald.png" alt="">
+              <div class="cp-badge" data-i18n="donatur_badge">DONATUR</div>
+              <div class="cp-price-wrap">
+                <span class="cp-price-old">Rp 600.000</span>
+                <span class="cp-price-new">Rp 485.000</span>
+              </div>
+              <span class="cp-promo-tag" data-i18n="donatur_promo">Diskon rank baru!</span>
+              <button class="btn-main" style="background:var(--donatur);color:#0b0f1a" onclick="openBuy('Rank Donatur')" data-i18n="btn_buy">Beli Sekarang</button>
+            </div>
+            <div class="cp-right">
+              <h4 data-i18n="donatur_benefit">Benefit Donatur</h4>
+              <ul class="cp-perks">
+                <li><span class="perk-dash">—</span><span data-i18n="d_unlock">Unlock semua sethome</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_kit">Claim kit (Cala+, Cala++, Custom, Donatur) — cooldown hanya 24 jam</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_bonus">Bonus spawner+ & spawner++ everyday</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_auction">Auction limit 40 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_order">Order limit 40 slot</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_ec">/enderchest</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_anvil">/anvil</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_ah">/ahfastbuy & /ahfastsell</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_craft">/craft</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_recipe">/recipe — lihat resep crafting</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_smith">/smithingtable</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_grind">/grindstone</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_compass">/Compass & fitur lainnya</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="d_prefix">Bebas request prefix nama rank</span></li>
               </ul>
             </div>
           </div>
@@ -408,7 +466,10 @@
           <div class="item-card amethyst-border glow-amethyst">
             <div class="item-icon-wrap"><img src="img/Netherite_Pickaxe.png" alt=""></div>
             <div class="item-name amethyst-color" data-i18n="am_pickaxe">Amethyst Drill</div>
-            <div class="item-price">Rp 35.000</div>
+            <div class="item-price-wrap">
+              <span class="item-price-old">Rp 35.000</span>
+              <span class="item-price-new">Rp 30.000</span>
+            </div>
             <p class="item-desc" data-i18n="am_pickaxe_d">Mining jauh lebih cepat dengan 3x3 block</p>
             <button class="item-btn amethyst-btn" onclick="openBuy('Amethyst Drill')" data-i18n="btn_buy_short">Beli</button>
           </div>
@@ -440,7 +501,7 @@
             <img style="width:34px;height:34px" src="img/Purple_Dye.png" alt="">
             <div class="media-badge">MEDIA</div>
             <p class="media-free" data-i18n="media_free">✦ Gratis / Free</p>
-            <p class="media-note" data-i18n="media_note">Berlaku selama 1 season</p>
+            <p class="media-note" data-i18n="media_note">Berlaku selama 1 bulan</p>
             <a href="https://wa.me/6281229029537?text=Halo%20admin%2C%20saya%20ingin%20mengajukan%20rank%20media%2C%20saya%20akan%20kirim%20bukti%20sudah%20mencapai%20requirement" target="_blank" class="btn-main" data-i18n="media_apply">Daftar Sekarang</a>
           </div>
           <div class="media-right">
@@ -448,15 +509,16 @@
               <h4 data-i18n="media_req">Requirement</h4>
               <ul class="media-list">
                 <li><span class="perk-dash">—</span><span data-i18n="mr1">500 total views livestream</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="mr2">2.000 views di TikTok atau YouTube</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mr2">5.000 views di TikTok atau YouTube</span></li>
               </ul>
             </div>
             <div class="media-col">
               <h4 data-i18n="media_ben">Benefit</h4>
               <ul class="media-list">
                 <li><span class="perk-dash">—</span><span data-i18n="mb1">Unlock semua sethome</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mb_kit">Claim kit media</span></li>
                 <li><span class="perk-dash">—</span><span data-i18n="mb2">Prefix "media" di tab & chat (warna ungu)</span></li>
-                <li><span class="perk-dash">—</span><span data-i18n="mb3">Berlaku 1 season penuh</span></li>
+                <li><span class="perk-dash">—</span><span data-i18n="mb3">Berlaku 1 bulan</span></li>
               </ul>
             </div>
           </div>
