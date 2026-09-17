@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cala SMP — Official Server & Shop</title>
+    <meta name="description" content="Server survival Indonesia terinspirasi Donut SMP. Terbuka untuk semua pemain.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient background glow -->
+    <div class="page-bg"></div>
+
+    <!-- App Layout Container -->
+    <div class="app-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-close" id="sidebarClose" aria-label="Tutup menu">✕</button>
+
+            <!-- Brand Box -->
+            <div class="brand-box">
+                <div class="brand-logo-wrap">
+                    <img src="img/cala.png" alt="Cala SMP" class="brand-logo">
+                </div>
+                <div class="brand-details">
+                    <h1 class="brand-title">CALA<span>SMP</span></h1>
+                    <span class="brand-tag">SURVIVAL SERVER</span>
+                </div>
+            </div>
+
+            <!-- Clean Navigation Categories -->
+            <div class="nav-card">
+                <div class="nav-label" data-i18n="categories_lbl">Kategori Menu</div>
+
+                <button class="nav-btn active" data-target="home">
+                    <span class="nav-icon"><img src="img/Oak_Door.png" alt="" class="mc-nav-ico"></span>
+                    <span data-i18n="nav_home">Beranda</span>
+                </button>
+
+                <div class="nav-group" id="storeGroup">
+                    <button class="nav-btn" id="storeTrigger">
+                        <span class="nav-icon"><img src="img/Emerald.png" alt="" class="mc-nav-ico"></span>
+                        <span data-i18n="nav_store">Toko Server</span>
+                        <span class="nav-chevron">▼</span>
+                    </button>
+                    <div class="nav-submenu" id="storeSubmenu">
+                        <div class="nav-submenu-inner">
+                            <button class="nav-sublink" data-target="ranks"><img src="img/Lapis_Lazuli.png" alt="" class="mc-sub-ico"><span data-i18n="nav_ranks">Rank</span></button>
+                            <button class="nav-sublink" data-target="keys"><img src="img/Tripwire_Hook.png" alt="" class="mc-sub-ico"><span data-i18n="nav_keys">Key Crate</span></button>
+                            <button class="nav-sublink" data-target="money"><img src="img/Bundle_Filled.png" alt="" class="mc-sub-ico"><span data-i18n="nav_money">Saldo Server</span></button>
+                            <button class="nav-sublink" data-target="tools"><img src="img/Netherite_Pickaxe.png" alt="" class="mc-sub-ico"><span data-i18n="nav_tools">Amethyst Tool</span></button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="nav-btn" data-target="media">
+                    <span class="nav-icon"><img src="img/Purple_Dye.png" alt="" class="mc-nav-ico"></span>
+                    <span data-i18n="nav_media">Media Partner</span>
+                </button>
+                
+                <button class="nav-btn" data-target="rules">
+                    <span class="nav-icon"><img src="img/Writable_Book.png" alt="" class="mc-nav-ico"></span>
+                    <span data-i18n="nav_rules">Aturan Server</span>
+                </button>
+
+                <!-- Integrated Language Switcher Box -->
+                <div class="sidebar-lang-box">
+                    <span class="lang-label">Bahasa:</span>
+                    <div class="lang-switch">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay for Mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- Topbar Header (Cleaned up, no buttons) -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-btn" id="menuBtn" aria-label="Buka Menu">
+                        <span>☰</span>
+                    </button>
+                    <div class="topbar-title-wrap">
+                        <h2 id="pageTitle" data-i18n="nav_home">Beranda</h2>
+                        <p id="pageSub" data-i18n="topbar_home_sub">Selamat datang di Cala SMP</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Panes Container -->
+            <div class="pane-wrapper">
+
+                <!-- PANE 1: BERANDA -->
+                <section class="pane active" id="pane-home">
+                    
+                    <!-- Hero Container with Video Background (DonutSMP Inspired Layout) -->
+                    <div class="hero-donut-section">
+                        
+                        <!-- Background Video Loop with High Brightness & Opacity -->
+                        <div class="hero-video-wrap">
+                            <video autoplay muted loop playsinline poster="img/cala.png">
+                                <source src="img/bg.mp4" type="video/mp4">
+                            </video>
+                            <div class="hero-video-overlay"></div>
+                        </div>
+
+                        <!-- 5-Card DonutSMP Style Hero Grid -->
+                        <div class="hero-donut-grid">
+                            
+                            <!-- Card 1: Brand Logo & Online Status (DonutSMP Centered Layout, No IP pill) -->
+                            <div class="hero-card-brand 3d-card hero-card-donut-style">
+                                <div class="hero-donut-logo-box">
+                                    <img src="img/cala.png" alt="Cala SMP" class="hero-donut-logo">
+                                </div>
+                                <div class="hero-donut-brand-info">
+                                    <h1 class="hero-donut-title">CALA<span>SMP</span></h1>
+                                    <div class="hero-status-tag">
+                                        <span class="live-status-dot"></span>
+                                        <span><strong id="player-count">--</strong> Online</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Store Banner Card (using store.png) -->
+                            <div class="hero-card-banner 3d-card" onclick="switchPane('store')">
+                                <img src="img/store.png" alt="Toko Server" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag" data-i18n="nav_store">TOKO SERVER</span>
+                                    <h3 class="hero-banner-title" data-i18n="hero_store_title">Rank, Key & Saldo</h3>
+                                </div>
+                                <div class="hero-banner-badge-go">
+                                    <span data-i18n="open_menu">Lihat Toko →</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Discord Banner Card (using discord.png) -->
+                            <a href="https://discord.gg/gHMrYFJQqt" target="_blank" class="hero-card-banner 3d-card">
+                                <img src="img/discord.png" alt="Discord" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">DISCORD</span>
+                                    <h3 class="hero-banner-title" data-i18n="hero_discord_title">Komunitas Discord</h3>
+                                </div>
+                                <div class="hero-banner-badge-go btn-disc-badge">
+                                    <span>Gabung ↗</span>
+                                </div>
+                            </a>
+
+                            <!-- Card 4: WhatsApp Banner Card (using whatsapp.png) -->
+                            <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank" class="hero-card-banner 3d-card">
+                                <img src="img/whatsapp.png" alt="WhatsApp" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">WHATSAPP</span>
+                                    <h3 class="hero-banner-title" data-i18n="hero_wa_title">Grup WhatsApp</h3>
+                                </div>
+                                <div class="hero-banner-badge-go btn-wa-badge">
+                                    <span>Gabung ↗</span>
+                                </div>
+                            </a>
+
+                            <!-- Card 5: Vote Banner Card (using vote.png) -->
+                            <a href="https://minecraft-mp.com/server/359580/vote/" target="_blank" class="hero-card-banner 3d-card">
+                                <img src="img/vote.png" alt="Vote" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">VOTE SERVER</span>
+                                    <h3 class="hero-banner-title" data-i18n="hero_vote_title">Dukung Cala SMP</h3>
+                                </div>
+                                <div class="hero-banner-badge-go btn-vote-badge">
+                                    <span>Vote ↗</span>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Server IP Info Grid (Uniform White Text for Java & Bedrock) -->
+                    <div class="info-grid-2">
+                        
+                        <!-- Java Edition Card -->
+                        <div class="info-card 3d-card">
+                            <div class="card-header">
+                                <span class="card-ico"><img src="img/Oak_Door.png" alt="" class="mc-header-ico"></span>
+                                <div>
+                                    <h3>Java Edition</h3>
+                                    <p data-i18n="lbl_java_sub">Versi 1.20+ sampai terbaru</p>
+                                </div>
+                            </div>
+                            <div class="ip-display-box">
+                                <span class="ip-val white-text">calasmp.xyz</span>
+                                <button class="btn-3d btn-sm" onclick="copyIP('calasmp.xyz')" data-i18n="btn_copy_short">Salin IP</button>
+                            </div>
+                        </div>
+
+                        <!-- Bedrock Edition Card -->
+                        <div class="info-card 3d-card">
+                            <div class="card-header">
+                                <span class="card-ico"><img src="img/Emerald.png" alt="" class="mc-header-ico"></span>
+                                <div>
+                                    <h3>Bedrock Edition</h3>
+                                    <p data-i18n="lbl_bedrock_sub">Mobile, Windows, dan Console</p>
+                                </div>
+                            </div>
+                            <div class="ip-display-box">
+                                <div class="ip-multi white-text">
+                                    <span>IP: <strong>calasmp.xyz</strong></span>
+                                    <span>Port: <strong>12011</strong></span>
+                                </div>
+                                <button class="btn-3d btn-sm" onclick="copyIP('calasmp.xyz:12011')" data-i18n="btn_copy_short">Salin IP</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- PANE 2: TOKO CATEGORIES (Improved UI/UX Overview) -->
+                <section class="pane" id="pane-store">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="store_eye">Toko Server</span>
+                        <h2 data-i18n="store_h2">Rank, Key dan Saldo Server</h2>
+                        <p data-i18n="store_sub">Semua pembelian digunakan untuk operasional dan pengembangan server.</p>
+                    </div>
+
+                    <div class="tile-grid">
+                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('ranks')">
+                            <div class="cat-card-top">
+                                <div class="tile-ico-wrap"><img src="img/Lapis_Lazuli.png" alt="Rank" class="mc-tile-img"></div>
+                                <span class="cat-start-price">Mulai Rp 25.000</span>
+                            </div>
+                            <h3 data-i18n="nav_ranks">Rank</h3>
+                            <p data-i18n="tile_ranks_d">Slot sethome lebih banyak, kit harian, dan limit auction house lebih besar.</p>
+                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Rank →</span>
+                        </div>
+
+                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('keys')">
+                            <div class="cat-card-top">
+                                <div class="tile-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Key Crate" class="mc-tile-img"></div>
+                                <span class="cat-start-price">Mulai Rp 10.000</span>
+                            </div>
+                            <h3 data-i18n="nav_keys">Key Crate</h3>
+                            <p data-i18n="tile_keys_d">Kunci untuk membuka crate loot box di dalam game.</p>
+                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Key →</span>
+                        </div>
+
+                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('money')">
+                            <div class="cat-card-top">
+                                <div class="tile-ico-wrap"><img src="img/Bundle_Filled.png" alt="Saldo" class="mc-tile-img"></div>
+                                <span class="cat-start-price">Mulai Rp 2.000</span>
+                            </div>
+                            <h3 data-i18n="nav_money">Saldo Server</h3>
+                            <p data-i18n="tile_money_d">Top up saldo money untuk transaksi dengan pemain lain.</p>
+                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Saldo →</span>
+                        </div>
+
+                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('tools')">
+                            <div class="cat-card-top">
+                                <div class="tile-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Tools" class="mc-tile-img"></div>
+                                <span class="cat-start-price">Mulai Rp 20.000</span>
+                            </div>
+                            <h3 data-i18n="nav_tools">Amethyst Tool</h3>
+                            <p data-i18n="tile_tools_d">Peralatan khusus seperti Tree Chopper, Sell Axe, dan Drill.</p>
+                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Tool →</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANE 3: RANKS (Cleaned PERMANEN Top Badges, Added to Benefit List for Custom & Donatur) -->
+                <section class="pane" id="pane-ranks">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="nav_ranks">Pilihan Rank</span>
+                        <h2 data-i18n="ranks_h2">Rank Server Cala SMP</h2>
+                        <p data-i18n="ranks_sub">Semua kit rank bisa diclaim setiap hari</p>
+                    </div>
+
+                    <!-- 4-Column Grid Layout matching store.hitmansmp.net Screenshot -->
+                    <div class="ranks-grid">
+                        
+                        <!-- Cala+ Rank Card (No Top PERMANEN Badge) -->
+                        <div class="rank-grid-card 3d-card">
+                            <div class="rank-card-top">
+                                <div class="rank-icon-bg">
+                                    <img src="img/Lapis_Lazuli.png" alt="Cala+" class="mc-rank-img">
+                                </div>
+                                <h3 class="rank-card-title">Cala+ Rank</h3>
+                                <button class="perks-toggle-btn" onclick="togglePerks(this)">
+                                    <span data-i18n="view_perks">Lihat benefit rank</span> <span class="arrow-ico">▼</span>
+                                </button>
+                            </div>
+
+                            <!-- Collapsible Perks Section -->
+                            <div class="perks-collapsible">
+                                <ul class="perks-grid-list">
+                                    <li><span class="check-ico">✓</span><span data-i18n="cp1">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cp2">Claim kit Cala+ setiap hari</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cp3">Auction house limit 25 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cp4">Order limit 25 slot</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Bottom Row: Price Left, Buy Button Right -->
+                            <div class="rank-card-footer">
+                                <div class="price-stack">
+                                    <span class="price-label" data-i18n="lbl_price">HARGA</span>
+                                    <div class="price-values">
+                                        <span class="old-price">Rp 35.000</span>
+                                        <span class="new-price">Rp 25.000</span>
+                                    </div>
+                                </div>
+                                <button class="btn-3d btn-buy" onclick="openBuyModal('Rank Cala+')" data-i18n="btn_buy">Beli</button>
+                            </div>
+                        </div>
+
+                        <!-- Cala++ Rank Card (No Top PERMANEN Badge) -->
+                        <div class="rank-grid-card 3d-card rank-highlight-purple">
+                            <div class="rank-card-top">
+                                <div class="rank-icon-bg purple-bg">
+                                    <img src="img/Diamond.png" alt="Cala++" class="mc-rank-img">
+                                </div>
+                                <h3 class="rank-card-title">Cala++ Rank</h3>
+                                <button class="perks-toggle-btn" onclick="togglePerks(this)">
+                                    <span data-i18n="view_perks">Lihat benefit rank</span> <span class="arrow-ico">▼</span>
+                                </button>
+                            </div>
+
+                            <!-- Collapsible Perks Section -->
+                            <div class="perks-collapsible">
+                                <ul class="perks-grid-list">
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp1">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cppkit">Claim kit Cala+ dan Cala++ setiap hari</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp4">Auction house limit 35 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp5">Order limit 35 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp67">Akses perintah enderchest dan anvil</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp9">Akses ahfastbuy dan ahfastsell</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Bottom Row: Price Left, Buy Button Right -->
+                            <div class="rank-card-footer">
+                                <div class="price-stack">
+                                    <span class="price-label" data-i18n="lbl_price">HARGA</span>
+                                    <div class="price-values">
+                                        <span class="old-price">Rp 65.000</span>
+                                        <span class="new-price">Rp 50.000</span>
+                                    </div>
+                                </div>
+                                <button class="btn-3d btn-buy btn-purple" onclick="openBuyModal('Rank Cala++')" data-i18n="btn_buy">Beli</button>
+                            </div>
+                        </div>
+
+                        <!-- CUSTOM Rank Card (PERMANEN shown inside Perks Dropdown) -->
+                        <div class="rank-grid-card 3d-card rank-highlight-white">
+                            <div class="rank-card-top">
+                                <div class="rank-icon-bg white-bg">
+                                    <img src="img/White_Dye.png" alt="Custom" class="mc-rank-img">
+                                </div>
+                                <h3 class="rank-card-title">Custom Rank</h3>
+                                <button class="perks-toggle-btn" onclick="togglePerks(this)">
+                                    <span data-i18n="view_perks">Lihat benefit rank</span> <span class="arrow-ico">▼</span>
+                                </button>
+                            </div>
+
+                            <!-- Collapsible Perks Section -->
+                            <div class="perks-collapsible">
+                                <ul class="perks-grid-list">
+                                    <li><span class="check-ico star-ico">⭐</span><strong class="highlight-perm" data-i18n="c_perm">Durasi Rank: PERMANEN</strong></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c1">Semua benefit Cala+ dan Cala++</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c2">Claim kit Cala+, Cala++, dan Custom</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c3">Auction house limit 40 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c4">Order limit 40 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c5">Akses craft, recipe, smithing, grindstone</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c10">Bebas request prefix nama rank</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Bottom Row: Price Left, Buy Button Right -->
+                            <div class="rank-card-footer">
+                                <div class="price-stack">
+                                    <span class="price-label" data-i18n="lbl_price">HARGA</span>
+                                    <div class="price-values">
+                                        <span class="old-price">Rp 250.000</span>
+                                        <span class="new-price">Rp 200.000</span>
+                                    </div>
+                                </div>
+                                <button class="btn-3d btn-buy btn-white" onclick="openBuyModal('Rank Custom')" data-i18n="btn_buy">Beli</button>
+                            </div>
+                        </div>
+
+                        <!-- DONATUR Rank Card (PERMANEN shown inside Perks Dropdown) -->
+                        <div class="rank-grid-card 3d-card rank-highlight-emerald">
+                            <div class="rank-card-top">
+                                <div class="rank-icon-bg emerald-bg">
+                                    <img src="img/Emerald.png" alt="Donatur" class="mc-rank-img">
+                                </div>
+                                <h3 class="rank-card-title">Donatur Rank</h3>
+                                <button class="perks-toggle-btn" onclick="togglePerks(this)">
+                                    <span data-i18n="view_perks">Lihat benefit rank</span> <span class="arrow-ico">▼</span>
+                                </button>
+                            </div>
+
+                            <!-- Collapsible Perks Section -->
+                            <div class="perks-collapsible">
+                                <ul class="perks-grid-list">
+                                    <li><span class="check-ico star-ico">⭐</span><strong class="highlight-perm" data-i18n="d_perm">Durasi Rank: PERMANEN</strong></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_unlock">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_kit">Claim kit rank cooldown 24 jam</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_auction">Auction house dan order limit 40 slot</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_ec">Akses ec, anvil, craft, smithing, grindstone</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_prefix">Bebas request prefix nama rank</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Bottom Row: Price Left, Buy Button Right -->
+                            <div class="rank-card-footer">
+                                <div class="price-stack">
+                                    <span class="price-label" data-i18n="lbl_price">HARGA</span>
+                                    <div class="price-values">
+                                        <span class="old-price">Rp 600.000</span>
+                                        <span class="new-price">Rp 485.000</span>
+                                    </div>
+                                </div>
+                                <button class="btn-3d btn-buy btn-green" onclick="openBuyModal('Rank Donatur')" data-i18n="btn_buy">Beli</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- PANE 4: KEYS -->
+                <section class="pane" id="pane-keys">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="nav_keys">Key Crate</span>
+                        <h2 data-i18n="keys_h2">Key Crate</h2>
+                        <p data-i18n="keys_sub">Kunci untuk membuka loot box di dalam game.</p>
+                    </div>
+
+                    <div class="item-grid">
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Gold Key" class="mc-item-img"></div>
+                            <h3 class="gold-text" data-i18n="key_gold">Gold Key</h3>
+                            <div class="item-price">Rp 10.000</div>
+                            <p data-i18n="key_gold_d">Kunci untuk membuka crate Gold.</p>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Gold Key')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Crimson Key" class="mc-item-img"></div>
+                            <h3 class="red-text" data-i18n="key_crimson">Crimson Key</h3>
+                            <div class="item-price">Rp 10.000</div>
+                            <p data-i18n="key_crimson_d">Kunci untuk membuka crate Crimson.</p>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Crimson Key')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Prime Key" class="mc-item-img"></div>
+                            <h3 class="blue-text" data-i18n="key_prime">Prime Key</h3>
+                            <div class="item-price">Rp 10.000</div>
+                            <p data-i18n="key_prime_d">Kunci untuk membuka crate Prime.</p>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Prime Key')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Amethyst Key" class="mc-item-img"></div>
+                            <h3 class="purple-text" data-i18n="key_amethyst">Amethyst Key</h3>
+                            <div class="item-price">Rp 15.000</div>
+                            <p data-i18n="key_amethyst_d">Kunci untuk membuka crate Amethyst.</p>
+                            <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Amethyst Key')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANE 5: MONEY (Strictly Aligned Grid) -->
+                <section class="pane" id="pane-money">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="nav_money">Saldo Server</span>
+                        <h2 data-i18n="money_h2">Top Up Saldo Server</h2>
+                        <p data-i18n="money_sub">Mulai dari Rp 2.000 untuk kebutuhan transaksi ekonomi.</p>
+                    </div>
+
+                    <div class="money-grid">
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 1M" class="mc-money-img"></div>
+                                <div class="money-amount">1M</div>
+                                <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
+                                <div class="money-price">Rp 2.000</div>
+                            </div>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 1M')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 5M" class="mc-money-img"></div>
+                                <div class="money-amount">5M</div>
+                                <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
+                                <div class="money-price">Rp 10.000</div>
+                            </div>
+                            <button class="btn-3d btn-item btn-green" onclick="openBuyModal('Money 5M')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 10M" class="mc-money-img"></div>
+                                <div class="money-amount">10M</div>
+                                <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
+                                <div class="money-price">Rp 20.000</div>
+                            </div>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 10M')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 25M" class="mc-money-img"></div>
+                                <div class="money-amount">25M</div>
+                                <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
+                                <div class="money-price">Rp 50.000</div>
+                            </div>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 25M')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 50M" class="mc-money-img"></div>
+                                <div class="money-amount">50M</div>
+                                <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
+                                <div class="money-price">Rp 100.000</div>
+                            </div>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 50M')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <!-- Card 6: Strictly Aligned Custom Card -->
+                        <div class="money-card 3d-card">
+                            <div class="money-top-wrap">
+                                <div class="money-ico-wrap"><img src="img/Nether_Star.png" alt="Custom Money" class="mc-money-img"></div>
+                                <div class="money-amount" data-i18n="custom_title">Custom</div>
+                                <div class="money-sublabel" data-i18n="custom_sub">Nominal sesuai kebutuhan</div>
+                                <div class="money-price">Bebas</div>
+                            </div>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Custom Money')" data-i18n="btn_contact">Hubungi Admin</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANE 6: TOOLS -->
+                <section class="pane" id="pane-tools">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="nav_tools">Amethyst Tools</span>
+                        <h2 data-i18n="tools_h2">Special Tools</h2>
+                        <p data-i18n="tools_sub">Peralatan khusus untuk membantu aktivitas mining dan grinding.</p>
+                    </div>
+
+                    <div class="item-grid">
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/TreeChopper_Axe.png" alt="Tree Chopper" class="mc-item-img"></div>
+                            <h3 class="purple-text" data-i18n="am_sword">Tree Chopper</h3>
+                            <div class="item-price">Rp 20.000</div>
+                            <p data-i18n="am_sword_d">Nebang satu pohon penuh dalam satu kali tebang.</p>
+                            <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Tree Chopper')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Sellaxe_Axe.png" alt="Sell Axe" class="mc-item-img"></div>
+                            <h3 class="purple-text" data-i18n="am_axe">Sell Axe</h3>
+                            <div class="item-price">Rp 20.000</div>
+                            <p data-i18n="am_axe_d">Jual otomatis isi chest langsung ke saldo money.</p>
+                            <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Sell Axe')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Amethyst Drill" class="mc-item-img"></div>
+                            <h3 class="purple-text" data-i18n="am_pickaxe">Amethyst Drill</h3>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 35.000</span>
+                                <span class="new-price">Rp 30.000</span>
+                            </div>
+                            <p data-i18n="am_pickaxe_d">Mining area 3x3 block durasi 1 bulan.</p>
+                            <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Amethyst Drill')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Potion_Water.png" alt="Shard Booster" class="mc-item-img"></div>
+                            <h3 class="cyan-text" data-i18n="am_shard">Shard Booster</h3>
+                            <div class="item-price">Rp 35.000</div>
+                            <p data-i18n="am_shard_d">Dapat 4 shard setiap menit selama 3 hari.</p>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Shard Booster')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+
+                        <div class="item-card 3d-card">
+                            <div class="item-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Amethyst Drill Perm" class="mc-item-img"></div>
+                            <h3 class="purple-text" data-i18n="am_pickaxe_perm">Amethyst Drill Permanent</h3>
+                            <div class="item-price">Rp 95.000</div>
+                            <p data-i18n="am_pickaxe_perm_d">Mining area 3x3 block berlaku permanen.</p>
+                            <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Amethyst Drill Permanent')" data-i18n="btn_buy_short">Beli</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANE 7: MEDIA PARTNER -->
+                <section class="pane" id="pane-media">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="media_eye">Content Creator</span>
+                        <h2 data-i18n="media_h2">Rank Media</h2>
+                        <p data-i18n="media_sub">Program khusus untuk pembuat konten dan streamer.</p>
+                    </div>
+
+                    <div class="media-box 3d-card">
+                        <div class="media-left">
+                            <div class="media-ico-wrap"><img src="img/Purple_Dye.png" alt="Media Rank" class="mc-media-img"></div>
+                            <div class="media-badge">MEDIA RANK</div>
+                            <div class="media-free" data-i18n="media_free">Gratis Claim</div>
+                            <div class="media-note" data-i18n="media_note">Berlaku selama 1 bulan</div>
+                            <a href="https://wa.me/6281229029537?text=Halo%20admin%2C%20saya%20ingin%20mengajukan%20rank%20media" target="_blank" class="btn-3d btn-buy btn-purple" data-i18n="media_apply">Daftar Sekarang</a>
+                        </div>
+                        <div class="media-right">
+                            <div class="media-col">
+                                <h4 data-i18n="media_req">Persyaratan</h4>
+                                <ul>
+                                    <li><span data-i18n="mr1">500 total views pada live streaming</span></li>
+                                    <li><span data-i18n="mr2">5000 views pada konten TikTok atau YouTube</span></li>
+                                </ul>
+                            </div>
+                            <div class="media-col">
+                                <h4 data-i18n="media_ben">Keuntungan</h4>
+                                <ul>
+                                    <li><span data-i18n="mb1">Unlock semua slot sethome</span></li>
+                                    <li><span data-i18n="mb_kit">Claim kit khusus media</span></li>
+                                    <li><span data-i18n="mb2">Prefix Media di chat dan tab list</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PANE 8: ATURAN SERVER (High-End Redesigned UI/UX) -->
+                <section class="pane" id="pane-rules">
+                    <div class="pane-header">
+                        <span class="eyebrow" data-i18n="rules_eye">Peraturan</span>
+                        <h2 data-i18n="rules_h2">Aturan Server dan Chat</h2>
+                        <p data-i18n="rules_sub">Patuhi aturan agar komunitas tetap sehat dan menyenangkan.</p>
+                    </div>
+
+                    <div class="rules-grid-modern">
+                        <!-- Gameplay Rules Card -->
+                        <div class="rules-card-modern 3d-card rule-card-gameplay">
+                            <div class="rule-card-header">
+                                <span class="rule-header-ico-wrap gameplay-ico"><img src="img/Writable_Book.png" alt="" class="mc-rules-header-ico"></span>
+                                <div>
+                                    <h3 data-i18n="rule1_title">Aturan Gameplay</h3>
+                                    <span class="rule-card-subtitle">Pedoman Permainan & Keamanan</span>
+                                </div>
+                            </div>
+
+                            <div class="rules-modern-list">
+                                <div class="rule-item-box">
+                                    <span class="rule-num">01</span>
+                                    <span data-i18n="r1_1">Dilarang menggunakan hacked clients atau cheat</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">02</span>
+                                    <span data-i18n="r1_2">Dilarang menggunakan movement dan inventory mods</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">03</span>
+                                    <span data-i18n="r1_3">Dilarang menggunakan freecam atau easy place</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">04</span>
+                                    <span data-i18n="r1_4">Dilarang menggunakan macro atau script auto clicker</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">05</span>
+                                    <span data-i18n="r1_5">Dilarang memanfaatkan bug atau dupe item</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">06</span>
+                                    <span data-i18n="r1_6">Dilarang transaksi IRL dan cross server trading</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">07</span>
+                                    <span data-i18n="r1_7">Dilarang mencari atau menggunakan seed server</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">08</span>
+                                    <span data-i18n="r1_8">Maksimal 3 akun per pemain</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Rules Card -->
+                        <div class="rules-card-modern 3d-card rule-card-chat">
+                            <div class="rule-card-header">
+                                <span class="rule-header-ico-wrap chat-ico"><img src="img/Writable_Book.png" alt="" class="mc-rules-header-ico"></span>
+                                <div>
+                                    <h3 data-i18n="rule2_title">Aturan Chat</h3>
+                                    <span class="rule-card-subtitle">Etika Komunikasi & Komunitas</span>
+                                </div>
+                            </div>
+
+                            <div class="rules-modern-list">
+                                <div class="rule-item-box">
+                                    <span class="rule-num">01</span>
+                                    <span data-i18n="r2_1">Dilarang spamming dan kata kata kasar</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">02</span>
+                                    <span data-i18n="r2_2">Dilarang promosi server lain</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">03</span>
+                                    <span data-i18n="r2_3">Dilarang ujaran kebencian dan diskriminasi</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">04</span>
+                                    <span data-i18n="r2_4">Dilarang menyebarkan informasi pribadi pemain lain</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">05</span>
+                                    <span data-i18n="r2_5">Dilarang mengaku sebagai staff</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">06</span>
+                                    <span data-i18n="r2_6">Dilarang menghindari sanksi ban</span>
+                                </div>
+                                <div class="rule-item-box">
+                                    <span class="rule-num">07</span>
+                                    <span data-i18n="r2_7">Laporkan bug dan cheater kepada admin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div> <!-- End Pane Wrapper -->
+
+            <!-- Website Footer (Simplified Copyright Text) -->
+            <footer class="app-footer">
+                <p data-i18n="foot_copy">© 2026 Cala SMP.</p>
+                <div class="foot-links">
+                    <a href="https://discord.gg/gHMrYFJQqt" target="_blank">Discord</a> |
+                    <a href="https://chat.whatsapp.com/Hsfldrb8zcM2hnNnsLXDwQ" target="_blank">WhatsApp</a> |
+                    <a href="https://minecraft-mp.com/server/359580/vote/" target="_blank">Vote</a>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Buy Modal Overlay -->
+    <div class="modal-overlay" id="buyOverlay" onclick="closeBuyModal()"></div>
+    <div class="modal-card 3d-card" id="buyModal">
+        <button class="modal-close-btn" onclick="closeBuyModal()">✕</button>
+        <div class="modal-header">
+            <img src="img/Emerald.png" alt="" class="mc-modal-ico">
+            <div>
+                <h3 id="modalItemTitle">Beli Item</h3>
+                <p data-i18n="modal_sub">Pilih metode kontak untuk memproses pembayaran</p>
+            </div>
+        </div>
+        <div class="modal-actions">
+            <a href="https://wa.me/6281229029537" target="_blank" id="modalWaBtn" class="btn-3d btn-wa">
+                <span>💬 WhatsApp Admin</span>
+            </a>
+            <a href="https://discord.com/users/SirVinnzzz" target="_blank" class="btn-3d btn-discord">
+                <span>🎮 Discord DM (SirVinnzzz)</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast Notification Popup -->
+    <div class="toast-popup" id="toast">IP Berhasil Disalin!</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
