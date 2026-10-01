@@ -1,3 +1,7 @@
+/* ==========================================================================
+   CALA SMP — Interactive Script System (HitmanSMP UI/UX & i18n Translation)
+   ========================================================================== */
+
 const SERVER_IP = "calasmp.xyz";
 const BEDROCK_PORT = "12011";
 const ADMIN_WA_PHONE = "6281229029537";
@@ -67,16 +71,17 @@ const TRANSLATIONS = {
         tile_keys_d: "Kunci untuk membuka crate loot box di dalam game.",
         tile_money_d: "Top up saldo money untuk transaksi dengan pemain lain.",
         tile_tools_d: "Peralatan khusus seperti Tree Chopper, Sell Axe, dan Drill.",
-        cp1: "Unlock semua slot sethome",
+        cp1: "Unlock 5 slot sethome",
         cp2: "Claim kit Cala+ setiap hari",
         cp3: "Auction house limit 25 slot",
         cp4: "Order limit 25 slot",
-        cpp1: "Unlock semua slot sethome",
+        cpp1: "Unlock 7 slot sethome",
         cppkit: "Claim kit Cala+ dan Cala++ setiap hari",
         cpp4: "Auction house limit 35 slot",
         cpp5: "Order limit 35 slot",
         cpp67: "Akses perintah enderchest dan anvil",
         cpp9: "Akses ahfastbuy dan ahfastsell",
+        c_home: "Unlock 8 slot sethome",
         c_perm: "Durasi Rank: PERMANEN",
         c1: "Semua benefit Cala+ dan Cala++",
         c2: "Claim kit Cala+, Cala++, dan Custom",
@@ -85,10 +90,10 @@ const TRANSLATIONS = {
         c5: "Akses craft, recipe, smithing, grindstone",
         c10: "Bebas request prefix nama rank",
         d_perm: "Durasi Rank: PERMANEN",
-        d_unlock: "Unlock semua slot sethome",
+        d_unlock: "Unlock 10 slot sethome",
         d_kit: "Claim kit rank cooldown 24 jam",
         d_auction: "Auction house dan order limit 40 slot",
-        d_ec: "Akses ec, anvil, craft, smithing, grindstone",
+        d_ec: "Akses ec, anvil, craft, smithing, grindstone dll",
         d_prefix: "Bebas request prefix nama rank",
         key_gold: "Gold Key",
         key_gold_d: "Kunci untuk membuka crate Gold.",
@@ -138,7 +143,18 @@ const TRANSLATIONS = {
         r2_6: "Dilarang menghindari sanksi ban",
         r2_7: "Laporkan bug dan cheater kepada admin",
         modal_sub: "Pilih metode kontak untuk memproses pembayaran",
-        foot_copy: "© 2026 Cala SMP."
+        foot_copy: "© 2026 Cala SMP.",
+        lbl_save: "HEMAT",
+        lbl_bonus: "BONUS",
+        hero_disc: "OCTOBER SALE",
+        promo_title: "Promo Spesial Toko Server",
+        promo_sub: "Rank, key, saldo, dan tool dengan harga lebih hemat.",
+        promo_upto: "Diskon hingga",
+        promo_save_upto: "Hemat hingga",
+        promo_bonus_upto: "Bonus hingga",
+        rule3_title: "Illegal Mods",
+        rule3_sub: "Mod yang dilarang di server",
+        rule3_note: "Modifikasi lain yang memberikan keuntungan tidak adil juga dapat dianggap ilegal."
     },
     en: {
         categories_lbl: "Menu Categories",
@@ -191,26 +207,27 @@ const TRANSLATIONS = {
         tile_keys_d: "Keys to open loot boxes in game.",
         tile_money_d: "Top up money balance for trading with players.",
         tile_tools_d: "Special tools like Tree Chopper, Sell Axe, and Drill.",
-        cp1: "Unlock all sethome slots",
+        cp1: "Unlock 5 sethome slots",
         cp2: "Claim Cala+ kit daily",
         cp3: "Auction house limit 25 slots",
         cp4: "Order limit 25 slots",
-        cpp1: "Unlock all sethome slots",
+        cpp1: "Unlock 7 sethome slots",
         cppkit: "Claim Cala+ and Cala++ kits daily",
         cpp4: "Auction house limit 35 slots",
         cpp5: "Order limit 35 slots",
         cpp67: "Access to enderchest and anvil commands",
         cpp9: "Access to ahfastbuy and ahfastsell",
+        c_home: "Unlock 8 sethome slots",
         c1: "All Cala+ and Cala++ benefits",
         c2: "Claim Cala+, Cala++, and Custom kits",
         c3: "Auction house limit 40 slots",
         c4: "Order limit 40 slots",
         c5: "Access to craft, recipe, smithing, grindstone",
         c10: "Free custom rank prefix request",
-        d_unlock: "Unlock all sethome slots",
+        d_unlock: "Unlock 10 sethome slots",
         d_kit: "Claim rank kits with 24h cooldown",
         d_auction: "Auction house and order limit 40 slots",
-        d_ec: "Access to ec, anvil, craft, smithing, grindstone",
+        d_ec: "Access to ec, anvil, craft, smithing, grindstone, etc.",
         d_prefix: "Free custom rank prefix request",
         key_gold: "Gold Key",
         key_gold_d: "Key to open Gold crate.",
@@ -260,7 +277,18 @@ const TRANSLATIONS = {
         r2_6: "No ban evasion allowed",
         r2_7: "Report bugs and cheaters to staff",
         modal_sub: "Select contact method to process purchase",
-        foot_copy: "© 2026 Cala SMP. All rights reserved."
+        foot_copy: "© 2026 Cala SMP. All rights reserved.",
+        lbl_save: "SAVE",
+        lbl_bonus: "BONUS",
+        hero_disc: "OCTOBER SALE",
+        promo_title: "Special Server Store Promo",
+        promo_sub: "Ranks, keys, balance, and tools at better prices.",
+        promo_upto: "Up to",
+        promo_save_upto: "Save up to",
+        promo_bonus_upto: "Bonus up to",
+        rule3_title: "Illegal Mods",
+        rule3_sub: "Mods that are banned on the server",
+        rule3_note: "Any other modification that provides an unfair advantage may also be considered illegal."
     }
 };
 
@@ -272,9 +300,12 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileDrawer();
     initLanguageSwitcher();
     updatePlayerCount();
-    
+
     // Set initial active state for body class (home page active)
     document.body.classList.add("pane-home-active");
+
+    // Set initial history state so the very first back press has somewhere to land
+    history.replaceState({ pane: "home" }, "", "#");
 
     setInterval(updatePlayerCount, 60000); // Fetch player count every 60 sec
 });
@@ -314,9 +345,15 @@ function initNavigation() {
             storeGroup.classList.toggle("open");
         });
     }
+
+    // Handle browser back/forward buttons
+    window.addEventListener("popstate", (e) => {
+        const paneId = (e.state && e.state.pane) || "home";
+        switchPane(paneId, true);
+    });
 }
 
-function switchPane(paneId) {
+function switchPane(paneId, isPopState = false) {
     if (!PANE_DATA[paneId]) return;
 
     // Toggle body class for page-specific element visibility
@@ -347,6 +384,12 @@ function switchPane(paneId) {
     const storeGroup = document.getElementById("storeGroup");
     if (["ranks", "keys", "money", "tools"].includes(paneId)) {
         if (storeGroup) storeGroup.classList.add("open");
+    }
+
+    // Push a new history entry only for real navigation (not when triggered by back/forward)
+    if (!isPopState) {
+        const url = paneId === "home" ? "#" : "#" + paneId;
+        history.pushState({ pane: paneId }, "", url);
     }
 
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -464,7 +507,7 @@ function openBuyModal(itemName) {
 
     const titlePrefix = currentLang === "id" ? "Beli" : "Buy";
     if (title) title.textContent = `${titlePrefix} ${itemName}`;
-    
+
     const msg = encodeURIComponent(`Halo admin, saya ingin membeli ${itemName} di Cala SMP.`);
     if (waBtn) waBtn.href = `https://wa.me/${ADMIN_WA_PHONE}?text=${msg}`;
 
@@ -521,29 +564,14 @@ function setLanguage(lang) {
     }
 }
 
-/* Load AFTER script.js — tambahan/override terjemahan */
-Object.assign(TRANSLATIONS.id,{
-  lbl_save:"HEMAT",lbl_bonus:"BONUS",hero_disc:"OCTOBER SALE",
-  promo_title:"Promo Spesial Toko Server",promo_sub:"Rank, key, saldo, dan tool dengan harga lebih hemat.",
-  promo_upto:"Diskon hingga",promo_save_upto:"Hemat hingga",promo_bonus_upto:"Bonus hingga",
-  cp1:"Unlock 5 slot sethome",cpp1:"Unlock 7 slot sethome",c_home:"Unlock 8 slot sethome",d_unlock:"Unlock 10 slot sethome",
-  d_ec:"Akses ec, anvil, craft, smithing, grindstone dll",
-  rule3_title:"Illegal Mods",rule3_sub:"Mod yang dilarang di server",rule3_note:"Modifikasi lain yang memberikan keuntungan tidak adil juga dapat dianggap ilegal."});
-Object.assign(TRANSLATIONS.en,{
-  lbl_save:"SAVE",lbl_bonus:"BONUS",hero_disc:"OCTOBER SALE",
-  promo_title:"Special Server Store Promo",promo_sub:"Ranks, keys, balance, and tools at better prices.",
-  promo_upto:"Up to",promo_save_upto:"Save up to",promo_bonus_upto:"Bonus up to",
-  cp1:"Unlock 5 sethome slots",cpp1:"Unlock 7 sethome slots",c_home:"Unlock 8 sethome slots",d_unlock:"Unlock 10 sethome slots",
-  d_ec:"Access to ec, anvil, craft, smithing, grindstone, etc.",
-  rule3_title:"Illegal Mods",rule3_sub:"Mods that are banned on the server",rule3_note:"Any other modification that provides an unfair advantage may also be considered illegal."});
-
-/* Load AFTER script.js — hitung % diskon otomatis dari harga coret & harga baru */
+/* --------------------------------------------------------------------------
+   Discount % Auto-calculator (badge merah, harga lama abu, harga baru hijau)
+   -------------------------------------------------------------------------- */
 (function () {
     const num = t => parseInt(String(t).replace(/[^\d]/g, ""), 10) || 0;
     const rp = n => "Rp " + n.toLocaleString("id-ID");
 
     function enhance() {
-        // 1) Harga: badge % merah, harga lama abu, harga baru hijau, baris hemat
         document.querySelectorAll(".price-values, .price-tag").forEach(box => {
             const o = box.querySelector(".old-price"), n = box.querySelector(".new-price");
             if (!o || !n || box.dataset.pct) return;
