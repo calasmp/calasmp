@@ -1,7 +1,3 @@
-/* ==========================================================================
-   CALA SMP — Interactive Script System (HitmanSMP UI/UX & i18n Translation)
-   ========================================================================== */
-
 const SERVER_IP = "calasmp.xyz";
 const BEDROCK_PORT = "12011";
 const ADMIN_WA_PHONE = "6281229029537";
@@ -524,3 +520,57 @@ function setLanguage(lang) {
         updateTopbarText(paneId);
     }
 }
+
+/* Load AFTER script.js — tambahan/override terjemahan */
+Object.assign(TRANSLATIONS.id,{
+  lbl_save:"HEMAT",lbl_bonus:"BONUS",hero_disc:"OCTOBER SALE",
+  promo_title:"Promo Spesial Toko Server",promo_sub:"Rank, key, saldo, dan tool dengan harga lebih hemat.",
+  promo_upto:"Diskon hingga",promo_save_upto:"Hemat hingga",promo_bonus_upto:"Bonus hingga",
+  cp1:"Unlock 5 slot sethome",cpp1:"Unlock 7 slot sethome",c_home:"Unlock 8 slot sethome",d_unlock:"Unlock 10 slot sethome",
+  d_ec:"Akses ec, anvil, craft, smithing, grindstone dll",
+  rule3_title:"Illegal Mods",rule3_sub:"Mod yang dilarang di server",rule3_note:"Modifikasi lain yang memberikan keuntungan tidak adil juga dapat dianggap ilegal."});
+Object.assign(TRANSLATIONS.en,{
+  lbl_save:"SAVE",lbl_bonus:"BONUS",hero_disc:"OCTOBER SALE",
+  promo_title:"Special Server Store Promo",promo_sub:"Ranks, keys, balance, and tools at better prices.",
+  promo_upto:"Up to",promo_save_upto:"Save up to",promo_bonus_upto:"Bonus up to",
+  cp1:"Unlock 5 sethome slots",cpp1:"Unlock 7 sethome slots",c_home:"Unlock 8 sethome slots",d_unlock:"Unlock 10 sethome slots",
+  d_ec:"Access to ec, anvil, craft, smithing, grindstone, etc.",
+  rule3_title:"Illegal Mods",rule3_sub:"Mods that are banned on the server",rule3_note:"Any other modification that provides an unfair advantage may also be considered illegal."});
+
+/* Load AFTER script.js — hitung % diskon otomatis dari harga coret & harga baru */
+(function () {
+    const num = t => parseInt(String(t).replace(/[^\d]/g, ""), 10) || 0;
+    const rp = n => "Rp " + n.toLocaleString("id-ID");
+
+    function enhance() {
+        // 1) Harga: badge % merah, harga lama abu, harga baru hijau, baris hemat
+        document.querySelectorAll(".price-values, .price-tag").forEach(box => {
+            const o = box.querySelector(".old-price"), n = box.querySelector(".new-price");
+            if (!o || !n || box.dataset.pct) return;
+            const old = num(o.textContent), now = num(n.textContent);
+            if (!old || now >= old) return;
+            const pct = Math.round((old - now) / old * 100), save = old - now;
+
+            const row = document.createElement("div");
+            row.className = "old-row";
+            const badge = document.createElement("span");
+            badge.className = "pct-badge";
+            badge.textContent = "-" + pct + "%";
+            o.parentNode.insertBefore(row, o);
+            row.append(badge, o);
+
+            const sv = document.createElement("div");
+            sv.className = "save-line";
+            sv.innerHTML = '<span data-i18n="lbl_save">HEMAT</span> <b>' + rp(save) + "</b>";
+            box.appendChild(sv);
+
+            box.dataset.pct = pct;
+            box.dataset.save = save;
+
+            const card = box.closest(".rank-grid-card, .item-card");
+            const rib = card && card.querySelector(".sale-ribbon:not(.bonus-ribbon)");
+            if (rib) rib.innerHTML = "<b>-" + pct + "%</b> OFF";
+        });
+    }
+    document.addEventListener("DOMContentLoaded", enhance);
+})();
