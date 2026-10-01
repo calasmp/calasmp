@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cala SMP — Official Server & Shop</title>
-    <meta name="description" content="Server survival Indonesia terinspirasi Donut SMP. Terbuka untuk semua pemain.">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/cala.png">
+    <link rel="apple-touch-icon" href="img/cala.png">
+    <meta name="description" content="Server Ecocpvp Indonesia">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/promo.css">
 </head>
 <body>
 
@@ -134,6 +137,7 @@
 
                             <!-- Card 2: Store Banner Card (using store.png) -->
                             <div class="hero-card-banner 3d-card" onclick="switchPane('store')">
+                                <div class="hero-discount-ribbon"><span data-i18n="hero_disc">OCTOBER SALE</span></div>
                                 <img src="img/store.png" alt="Toko Server" class="hero-banner-img">
                                 <div class="hero-banner-gradient"></div>
                                 <div class="hero-banner-content">
@@ -235,45 +239,66 @@
                         <p data-i18n="store_sub">Semua pembelian digunakan untuk operasional dan pengembangan server.</p>
                     </div>
 
-                    <div class="tile-grid">
-                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('ranks')">
-                            <div class="cat-card-top">
-                                <div class="tile-ico-wrap"><img src="img/Lapis_Lazuli.png" alt="Rank" class="mc-tile-img"></div>
-                                <span class="cat-start-price">Mulai Rp 25.000</span>
-                            </div>
-                            <h3 data-i18n="nav_ranks">Rank</h3>
-                            <p data-i18n="tile_ranks_d">Slot sethome lebih banyak, kit harian, dan limit auction house lebih besar.</p>
-                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Rank →</span>
-                        </div>
 
-                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('keys')">
-                            <div class="cat-card-top">
-                                <div class="tile-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Key Crate" class="mc-tile-img"></div>
-                                <span class="cat-start-price">Mulai Rp 10.000</span>
-                            </div>
-                            <h3 data-i18n="nav_keys">Key Crate</h3>
-                            <p data-i18n="tile_keys_d">Kunci untuk membuka crate loot box di dalam game.</p>
-                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Key →</span>
+                    <div class="hero-donut-section store-hero-section">
+                        <div class="hero-video-wrap">
+                            <video autoplay muted loop playsinline poster="img/cala.png">
+                                <source src="img/bg.mp4" type="video/mp4">
+                            </video>
+                            <div class="hero-video-overlay"></div>
                         </div>
-
-                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('money')">
-                            <div class="cat-card-top">
-                                <div class="tile-ico-wrap"><img src="img/Bundle_Filled.png" alt="Saldo" class="mc-tile-img"></div>
-                                <span class="cat-start-price">Mulai Rp 2.000</span>
+                        <div class="store-hero-grid">
+                            <div class="hero-card-banner 3d-card store-hero-card" onclick="switchPane('ranks')">
+                                <img src="img/rank.png" alt="Rank" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">RANK</span>
+                                    <h3 class="hero-banner-title" data-i18n="nav_ranks">Rank</h3>
+                                    <p class="hero-banner-desc" data-i18n="tile_ranks_d">Slot sethome lebih banyak, kit harian, dan limit auction house lebih besar.</p>
+                                </div>
+                                <div class="hero-banner-badge-go">
+                                    <span data-i18n="open_menu">Lihat Menu →</span>
+                                </div>
                             </div>
-                            <h3 data-i18n="nav_money">Saldo Server</h3>
-                            <p data-i18n="tile_money_d">Top up saldo money untuk transaksi dengan pemain lain.</p>
-                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Saldo →</span>
-                        </div>
 
-                        <div class="tile-card 3d-card store-cat-card" onclick="switchPane('tools')">
-                            <div class="cat-card-top">
-                                <div class="tile-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Tools" class="mc-tile-img"></div>
-                                <span class="cat-start-price">Mulai Rp 20.000</span>
+                            <div class="hero-card-banner 3d-card store-hero-card" onclick="switchPane('keys')">
+                                <img src="img/crate.png" alt="Key Crate" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">KEY CRATE</span>
+                                    <h3 class="hero-banner-title" data-i18n="nav_keys">Key Crate</h3>
+                                    <p class="hero-banner-desc" data-i18n="tile_keys_d">Kunci untuk membuka crate loot box di dalam game.</p>
+                                </div>
+                                <div class="hero-banner-badge-go">
+                                    <span data-i18n="open_menu">Lihat Menu →</span>
+                                </div>
                             </div>
-                            <h3 data-i18n="nav_tools">Amethyst Tool</h3>
-                            <p data-i18n="tile_tools_d">Peralatan khusus seperti Tree Chopper, Sell Axe, dan Drill.</p>
-                            <span class="btn-3d btn-tile-go" data-i18n="open_menu">Lihat Tool →</span>
+
+                            <div class="hero-card-banner 3d-card store-hero-card" onclick="switchPane('money')">
+                                <img src="img/money.png" alt="Saldo Server" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">SALDO</span>
+                                    <h3 class="hero-banner-title" data-i18n="nav_money">Saldo Server</h3>
+                                    <p class="hero-banner-desc" data-i18n="tile_money_d">Top up saldo money untuk transaksi dengan pemain lain.</p>
+                                </div>
+                                <div class="hero-banner-badge-go">
+                                    <span data-i18n="open_menu">Lihat Menu →</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-card-banner 3d-card store-hero-card" onclick="switchPane('tools')">
+                                <img src="img/amethyst.png" alt="Amethyst Tool" class="hero-banner-img">
+                                <div class="hero-banner-gradient"></div>
+                                <div class="hero-banner-content">
+                                    <span class="hero-banner-subtag">AMETHYST</span>
+                                    <h3 class="hero-banner-title" data-i18n="nav_tools">Amethyst Tool</h3>
+                                    <p class="hero-banner-desc" data-i18n="tile_tools_d">Peralatan khusus seperti Tree Chopper, Sell Axe, dan Drill.</p>
+                                </div>
+                                <div class="hero-banner-badge-go">
+                                    <span data-i18n="open_menu">Lihat Menu →</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -285,12 +310,21 @@
                         <h2 data-i18n="ranks_h2">Rank Server Cala SMP</h2>
                         <p data-i18n="ranks_sub">Semua kit rank bisa diclaim setiap hari</p>
                     </div>
+                    <div class="promo-banner">
+                        <div class="promo-percent">OCTOBER<br>SALE</div>
+                        <div class="promo-text">
+                            <h4 data-i18n="promo_title">Promo Spesial Toko Server</h4>
+                            <p data-i18n="promo_sub">Rank, key, saldo, dan tool dengan harga lebih hemat.</p>
+                        </div>
+                    </div>
+
 
                     <!-- 4-Column Grid Layout matching store.hitmansmp.net Screenshot -->
                     <div class="ranks-grid">
                         
                         <!-- Cala+ Rank Card (No Top PERMANEN Badge) -->
                         <div class="rank-grid-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 10.000</b></div>
                             <div class="rank-card-top">
                                 <div class="rank-icon-bg">
                                     <img src="img/Lapis_Lazuli.png" alt="Cala+" class="mc-rank-img">
@@ -304,7 +338,7 @@
                             <!-- Collapsible Perks Section -->
                             <div class="perks-collapsible">
                                 <ul class="perks-grid-list">
-                                    <li><span class="check-ico">✓</span><span data-i18n="cp1">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cp1">Unlock 5 slot sethome</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cp2">Claim kit Cala+ setiap hari</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cp3">Auction house limit 25 slot</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cp4">Order limit 25 slot</span></li>
@@ -326,6 +360,7 @@
 
                         <!-- Cala++ Rank Card (No Top PERMANEN Badge) -->
                         <div class="rank-grid-card 3d-card rank-highlight-purple">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 25.000</b></div>
                             <div class="rank-card-top">
                                 <div class="rank-icon-bg purple-bg">
                                     <img src="img/Diamond.png" alt="Cala++" class="mc-rank-img">
@@ -339,7 +374,7 @@
                             <!-- Collapsible Perks Section -->
                             <div class="perks-collapsible">
                                 <ul class="perks-grid-list">
-                                    <li><span class="check-ico">✓</span><span data-i18n="cpp1">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="cpp1">Unlock 7 slot sethome</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cppkit">Claim kit Cala+ dan Cala++ setiap hari</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cpp4">Auction house limit 35 slot</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="cpp5">Order limit 35 slot</span></li>
@@ -354,7 +389,7 @@
                                     <span class="price-label" data-i18n="lbl_price">HARGA</span>
                                     <div class="price-values">
                                         <span class="old-price">Rp 65.000</span>
-                                        <span class="new-price">Rp 50.000</span>
+                                        <span class="new-price">Rp 40.000</span>
                                     </div>
                                 </div>
                                 <button class="btn-3d btn-buy btn-purple" onclick="openBuyModal('Rank Cala++')" data-i18n="btn_buy">Beli</button>
@@ -363,6 +398,7 @@
 
                         <!-- CUSTOM Rank Card (PERMANEN shown inside Perks Dropdown) -->
                         <div class="rank-grid-card 3d-card rank-highlight-white">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 110.000</b></div>
                             <div class="rank-card-top">
                                 <div class="rank-icon-bg white-bg">
                                     <img src="img/White_Dye.png" alt="Custom" class="mc-rank-img">
@@ -376,7 +412,7 @@
                             <!-- Collapsible Perks Section -->
                             <div class="perks-collapsible">
                                 <ul class="perks-grid-list">
-                                    <li><span class="check-ico star-ico">⭐</span><strong class="highlight-perm" data-i18n="c_perm">Durasi Rank: PERMANEN</strong></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="c_home">Unlock 8 slot sethome</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="c1">Semua benefit Cala+ dan Cala++</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="c2">Claim kit Cala+, Cala++, dan Custom</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="c3">Auction house limit 40 slot</span></li>
@@ -392,7 +428,7 @@
                                     <span class="price-label" data-i18n="lbl_price">HARGA</span>
                                     <div class="price-values">
                                         <span class="old-price">Rp 250.000</span>
-                                        <span class="new-price">Rp 200.000</span>
+                                        <span class="new-price">Rp 140.000</span>
                                     </div>
                                 </div>
                                 <button class="btn-3d btn-buy btn-white" onclick="openBuyModal('Rank Custom')" data-i18n="btn_buy">Beli</button>
@@ -401,6 +437,7 @@
 
                         <!-- DONATUR Rank Card (PERMANEN shown inside Perks Dropdown) -->
                         <div class="rank-grid-card 3d-card rank-highlight-emerald">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 300.000</b></div>
                             <div class="rank-card-top">
                                 <div class="rank-icon-bg emerald-bg">
                                     <img src="img/Emerald.png" alt="Donatur" class="mc-rank-img">
@@ -414,11 +451,10 @@
                             <!-- Collapsible Perks Section -->
                             <div class="perks-collapsible">
                                 <ul class="perks-grid-list">
-                                    <li><span class="check-ico star-ico">⭐</span><strong class="highlight-perm" data-i18n="d_perm">Durasi Rank: PERMANEN</strong></li>
-                                    <li><span class="check-ico">✓</span><span data-i18n="d_unlock">Unlock semua slot sethome</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_unlock">Unlock 10 slot sethome</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="d_kit">Claim kit rank cooldown 24 jam</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="d_auction">Auction house dan order limit 40 slot</span></li>
-                                    <li><span class="check-ico">✓</span><span data-i18n="d_ec">Akses ec, anvil, craft, smithing, grindstone</span></li>
+                                    <li><span class="check-ico">✓</span><span data-i18n="d_ec">Akses ec, anvil, craft, smithing, grindstone dll</span></li>
                                     <li><span class="check-ico">✓</span><span data-i18n="d_prefix">Bebas request prefix nama rank</span></li>
                                 </ul>
                             </div>
@@ -429,7 +465,7 @@
                                     <span class="price-label" data-i18n="lbl_price">HARGA</span>
                                     <div class="price-values">
                                         <span class="old-price">Rp 600.000</span>
-                                        <span class="new-price">Rp 485.000</span>
+                                        <span class="new-price">Rp 300.000</span>
                                     </div>
                                 </div>
                                 <button class="btn-3d btn-buy btn-green" onclick="openBuyModal('Rank Donatur')" data-i18n="btn_buy">Beli</button>
@@ -446,36 +482,60 @@
                         <h2 data-i18n="keys_h2">Key Crate</h2>
                         <p data-i18n="keys_sub">Kunci untuk membuka loot box di dalam game.</p>
                     </div>
+                    <div class="promo-banner">
+                        <div class="promo-percent">OCTOBER<br>SALE</div>
+                        <div class="promo-text">
+                            <h4 data-i18n="promo_title">Promo Spesial Toko Server</h4>
+                            <p data-i18n="promo_sub">Rank, key, saldo, dan tool dengan harga lebih hemat.</p>
+                        </div>
+                    </div>
+
 
                     <div class="item-grid">
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 3.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Gold Key" class="mc-item-img"></div>
                             <h3 class="gold-text" data-i18n="key_gold">Gold Key</h3>
-                            <div class="item-price">Rp 10.000</div>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 10.000</span>
+                                <span class="new-price">Rp 7.000</span>
+                            </div>
                             <p data-i18n="key_gold_d">Kunci untuk membuka crate Gold.</p>
                             <button class="btn-3d btn-item" onclick="openBuyModal('Gold Key')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 3.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Crimson Key" class="mc-item-img"></div>
                             <h3 class="red-text" data-i18n="key_crimson">Crimson Key</h3>
-                            <div class="item-price">Rp 10.000</div>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 10.000</span>
+                                <span class="new-price">Rp 7.000</span>
+                            </div>
                             <p data-i18n="key_crimson_d">Kunci untuk membuka crate Crimson.</p>
                             <button class="btn-3d btn-item" onclick="openBuyModal('Crimson Key')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 3.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Prime Key" class="mc-item-img"></div>
                             <h3 class="blue-text" data-i18n="key_prime">Prime Key</h3>
-                            <div class="item-price">Rp 10.000</div>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 10.000</span>
+                                <span class="new-price">Rp 7.000</span>
+                            </div>
                             <p data-i18n="key_prime_d">Kunci untuk membuka crate Prime.</p>
                             <button class="btn-3d btn-item" onclick="openBuyModal('Prime Key')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 5.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Tripwire_Hook.png" alt="Amethyst Key" class="mc-item-img"></div>
                             <h3 class="purple-text" data-i18n="key_amethyst">Amethyst Key</h3>
-                            <div class="item-price">Rp 15.000</div>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 15.000</span>
+                                <span class="new-price">Rp 10.000</span>
+                            </div>
                             <p data-i18n="key_amethyst_d">Kunci untuk membuka crate Amethyst.</p>
                             <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Amethyst Key')" data-i18n="btn_buy_short">Beli</button>
                         </div>
@@ -489,12 +549,21 @@
                         <h2 data-i18n="money_h2">Top Up Saldo Server</h2>
                         <p data-i18n="money_sub">Mulai dari Rp 2.000 untuk kebutuhan transaksi ekonomi.</p>
                     </div>
+                    <div class="promo-banner">
+                        <div class="promo-percent">OCTOBER<br>SALE</div>
+                        <div class="promo-text">
+                            <h4 data-i18n="promo_title">Promo Spesial Toko Server</h4>
+                            <p data-i18n="promo_sub">Rank, key, saldo, dan tool dengan harga lebih hemat.</p>
+                        </div>
+                    </div>
+
 
                     <div class="money-grid">
                         <div class="money-card 3d-card">
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 1M" class="mc-money-img"></div>
                                 <div class="money-amount">1M</div>
+                                <div class="money-bonus-row"></div>
                                 <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
                                 <div class="money-price">Rp 2.000</div>
                             </div>
@@ -505,40 +574,47 @@
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 5M" class="mc-money-img"></div>
                                 <div class="money-amount">5M</div>
+                                <div class="money-bonus-row"></div>
                                 <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
                                 <div class="money-price">Rp 10.000</div>
                             </div>
                             <button class="btn-3d btn-item btn-green" onclick="openBuyModal('Money 5M')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
-                        <div class="money-card 3d-card">
+                        <div class="money-card 3d-card has-bonus">
+                            <div class="sale-ribbon bonus-ribbon"><span data-i18n="lbl_bonus">BONUS</span> +2M</div>
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 10M" class="mc-money-img"></div>
-                                <div class="money-amount">10M</div>
+                                <div class="money-amount">12M</div>
+                                <div class="money-bonus-row"><span class="old-amt">10M</span><span class="bonus-pill"><span data-i18n="lbl_bonus">BONUS</span> +2M</span></div>
                                 <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
                                 <div class="money-price">Rp 20.000</div>
                             </div>
-                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 10M')" data-i18n="btn_buy_short">Beli</button>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 10M + Bonus 2M')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
-                        <div class="money-card 3d-card">
+                        <div class="money-card 3d-card has-bonus">
+                            <div class="sale-ribbon bonus-ribbon"><span data-i18n="lbl_bonus">BONUS</span> +10M</div>
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 25M" class="mc-money-img"></div>
-                                <div class="money-amount">25M</div>
+                                <div class="money-amount">35M</div>
+                                <div class="money-bonus-row"><span class="old-amt">25M</span><span class="bonus-pill"><span data-i18n="lbl_bonus">BONUS</span> +10M</span></div>
                                 <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
                                 <div class="money-price">Rp 50.000</div>
                             </div>
-                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 25M')" data-i18n="btn_buy_short">Beli</button>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 25M + Bonus 10M')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
-                        <div class="money-card 3d-card">
+                        <div class="money-card 3d-card has-bonus">
+                            <div class="sale-ribbon bonus-ribbon"><span data-i18n="lbl_bonus">BONUS</span> +50M</div>
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Bundle_Filled.png" alt="Money 50M" class="mc-money-img"></div>
-                                <div class="money-amount">50M</div>
+                                <div class="money-amount">100M</div>
+                                <div class="money-bonus-row"><span class="old-amt">50M</span><span class="bonus-pill"><span data-i18n="lbl_bonus">BONUS</span> +50M</span></div>
                                 <div class="money-sublabel" data-i18n="money_label">Saldo Server</div>
                                 <div class="money-price">Rp 100.000</div>
                             </div>
-                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 50M')" data-i18n="btn_buy_short">Beli</button>
+                            <button class="btn-3d btn-item" onclick="openBuyModal('Money 50M + Bonus 50M')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <!-- Card 6: Strictly Aligned Custom Card -->
@@ -546,6 +622,7 @@
                             <div class="money-top-wrap">
                                 <div class="money-ico-wrap"><img src="img/Nether_Star.png" alt="Custom Money" class="mc-money-img"></div>
                                 <div class="money-amount" data-i18n="custom_title">Custom</div>
+                                <div class="money-bonus-row"></div>
                                 <div class="money-sublabel" data-i18n="custom_sub">Nominal sesuai kebutuhan</div>
                                 <div class="money-price">Bebas</div>
                             </div>
@@ -561,27 +638,47 @@
                         <h2 data-i18n="tools_h2">Special Tools</h2>
                         <p data-i18n="tools_sub">Peralatan khusus untuk membantu aktivitas mining dan grinding.</p>
                     </div>
+                    <div class="promo-banner">
+                        <div class="promo-percent">OCTOBER<br>SALE</div>
+                        <div class="promo-text">
+                            <h4 data-i18n="promo_title">Promo Spesial Toko Server</h4>
+                            <p data-i18n="promo_sub">Rank, key, saldo, dan tool dengan harga lebih hemat.</p>
+                        </div>
+                    </div>
+
 
                     <div class="item-grid">
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 5.000</b></div>
                             <div class="item-ico-wrap"><img src="img/TreeChopper_Axe.png" alt="Tree Chopper" class="mc-item-img"></div>
                             <h3 class="purple-text" data-i18n="am_sword">Tree Chopper</h3>
-                            <div class="item-price">Rp 20.000</div>
+                            <span class="duration-tag">1 month duration</span>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 20.000</span>
+                                <span class="new-price">Rp 15.000</span>
+                            </div>
                             <p data-i18n="am_sword_d">Nebang satu pohon penuh dalam satu kali tebang.</p>
                             <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Tree Chopper')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 5.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Sellaxe_Axe.png" alt="Sell Axe" class="mc-item-img"></div>
                             <h3 class="purple-text" data-i18n="am_axe">Sell Axe</h3>
-                            <div class="item-price">Rp 20.000</div>
+                            <span class="duration-tag">1 month duration</span>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 20.000</span>
+                                <span class="new-price">Rp 15.000</span>
+                            </div>
                             <p data-i18n="am_axe_d">Jual otomatis isi chest langsung ke saldo money.</p>
                             <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Sell Axe')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 5.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Amethyst Drill" class="mc-item-img"></div>
                             <h3 class="purple-text" data-i18n="am_pickaxe">Amethyst Drill</h3>
+                            <span class="duration-tag">1 month duration</span>
                             <div class="price-tag">
                                 <span class="old-price">Rp 35.000</span>
                                 <span class="new-price">Rp 30.000</span>
@@ -591,17 +688,27 @@
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 5.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Potion_Water.png" alt="Shard Booster" class="mc-item-img"></div>
                             <h3 class="cyan-text" data-i18n="am_shard">Shard Booster</h3>
-                            <div class="item-price">Rp 35.000</div>
+                            <span class="duration-tag">3 days duration</span>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 35.000</span>
+                                <span class="new-price">Rp 30.000</span>
+                            </div>
                             <p data-i18n="am_shard_d">Dapat 4 shard setiap menit selama 3 hari.</p>
                             <button class="btn-3d btn-item" onclick="openBuyModal('Shard Booster')" data-i18n="btn_buy_short">Beli</button>
                         </div>
 
                         <div class="item-card 3d-card">
+                            <div class="sale-ribbon"><span data-i18n="lbl_save">HEMAT</span> <b>Rp 15.000</b></div>
                             <div class="item-ico-wrap"><img src="img/Netherite_Pickaxe.png" alt="Amethyst Drill Perm" class="mc-item-img"></div>
                             <h3 class="purple-text" data-i18n="am_pickaxe_perm">Amethyst Drill Permanent</h3>
-                            <div class="item-price">Rp 95.000</div>
+                            <span class="duration-tag dur-infinite">∞ Infinite duration</span>
+                            <div class="price-tag">
+                                <span class="old-price">Rp 95.000</span>
+                                <span class="new-price">Rp 80.000</span>
+                            </div>
                             <p data-i18n="am_pickaxe_perm_d">Mining area 3x3 block berlaku permanen.</p>
                             <button class="btn-3d btn-item btn-purple" onclick="openBuyModal('Amethyst Drill Permanent')" data-i18n="btn_buy_short">Beli</button>
                         </div>
@@ -740,6 +847,35 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Illegal Mods Card -->
+                        <div class="rules-card-modern 3d-card rule-card-mods">
+                            <div class="rule-card-header">
+                                <span class="rule-header-ico-wrap mods-ico"><img src="img/Writable_Book.png" alt="" class="mc-rules-header-ico"></span>
+                                <div>
+                                    <h3 data-i18n="rule3_title">Illegal Mods</h3>
+                                    <span class="rule-card-subtitle" data-i18n="rule3_sub">Mod yang dilarang di server</span>
+                                </div>
+                            </div>
+                            <div class="rules-modern-list mods-list">
+                                <div class="rule-item-box"><span class="rule-num">01</span><span>Fast Totem</span></div>
+                                <div class="rule-item-box"><span class="rule-num">02</span><span>Tweakeroo</span></div>
+                                <div class="rule-item-box"><span class="rule-num">03</span><span>All Crystal Optimizer (except Marlow)</span></div>
+                                <div class="rule-item-box"><span class="rule-num">04</span><span>Anchor Optimizer</span></div>
+                                <div class="rule-item-box"><span class="rule-num">05</span><span>Xaero Minimap / other minimap mods</span></div>
+                                <div class="rule-item-box"><span class="rule-num">06</span><span>All Freecam mods</span></div>
+                                <div class="rule-item-box"><span class="rule-num">07</span><span>All ESP mods</span></div>
+                                <div class="rule-item-box"><span class="rule-num">08</span><span>X-Ray</span></div>
+                                <div class="rule-item-box"><span class="rule-num">09</span><span>Accurate Block Placement</span></div>
+                                <div class="rule-item-box"><span class="rule-num">10</span><span>Bridging Mods</span></div>
+                                <div class="rule-item-box"><span class="rule-num">11</span><span>Auto Clicker</span></div>
+                                <div class="rule-item-box"><span class="rule-num">12</span><span>Inventory Profiles Next</span></div>
+                                <div class="rule-item-box"><span class="rule-num">13</span><span>Multi Key Bindings</span></div>
+                                <div class="rule-item-box"><span class="rule-num">14</span><span>Click Crystal</span></div>
+                                <div class="rule-item-box"><span class="rule-num">15</span><span>FastXP</span></div>
+                                <div class="rule-item-box"><span class="rule-num">16</span><span>Litematica Printer</span></div>
+                            </div>
+                            <div class="mods-note" data-i18n="rule3_note">Modifikasi lain yang memberikan keuntungan tidak adil juga dapat dianggap ilegal.</div>
+                        </div>
                     </div>
                 </section>
 
@@ -783,5 +919,8 @@
     <div class="toast-popup" id="toast">IP Berhasil Disalin!</div>
 
     <script src="js/script.js"></script>
+    <script src="js/promo-i18n.js"></script>
+    <script src="js/discount.js"></script>
+    <script src="js/history.js"></script>
 </body>
 </html>
